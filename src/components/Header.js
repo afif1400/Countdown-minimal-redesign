@@ -15,7 +15,7 @@ const Header = ({ color }) => {
     const [initial, setInitial] = useState(true)
 
     return (
-        <div className='container'>
+        <div>
             <div style={{ height: 96, zIndex: 10, position: 'relative' }}>
                 <Grid
                     container
@@ -26,6 +26,7 @@ const Header = ({ color }) => {
                     <Grid container justify='space-between' alignItems='center'>
                         <Grid item>
                             <Button
+                                style={{ padding: 0, margin: 0 }}
                                 disabled={disabled}
                                 onClick={() => {
                                     if (initial) setInitial(false)
