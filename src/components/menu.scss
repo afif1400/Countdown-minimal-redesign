@@ -1,0 +1,131 @@
+$yellow: #f1ff39;
+$black: #191919;
+
+header {
+    height: 100px;
+    .inner-header {
+        position: relative;
+        z-index: 10;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo a {
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            color: $black;
+        }
+        .menu {
+            button {
+                border: none;
+                background: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 0.8rem;
+                mix-blend-mode: difference;
+            }
+        }
+    }
+    .hamburger-menu {
+        display: none;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        .menu-secondary-background-color {
+            background: $yellow;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+        }
+        .menu-layer {
+            position: relative;
+            background: $black;
+            height: 100%;
+            overflow: hidden;
+            .menu-city-background {
+                top: 0;
+                left: 0;
+                right: 0;
+
+                position: absolute;
+                height: 100vh;
+                width: 100%;
+                opacity: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation-name: backgroundEffect;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+            }
+            .wrapper {
+                position: relative;
+                .menu-links {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+
+                    text-transform: uppercase;
+                    nav {
+                        display: block;
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            li {
+                                list-style: none;
+                                font-size: 6rem;
+                                font-weight: 700;
+
+                                height: 135px;
+                                overflow: hidden;
+                                position: relative;
+                                width: 700px;
+                                color: #fff;
+                                text-decoration: none;
+                                span {
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: $yellow;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .locations {
+                    position: absolute;
+                    bottom: -80px;
+                    color: #fff;
+                    margin-top: 16px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    span {
+                        cursor: pointer;
+                        &:first-child {
+                            margin-left: 64px;
+                        }
+                        font-weight: 400;
+                        margin: 0 32px;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: #fff;
+                            background: $black;
+                            padding: 8px 24px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
