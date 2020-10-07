@@ -9,6 +9,7 @@ import Link from '../components/Link'
 import Header from '../components/Header'
 import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
+import Hero from '../components/Hero'
 
 export default function Index() {
     useEffect(() => {
@@ -43,40 +44,50 @@ export default function Index() {
             document.querySelector('#scroll-container')
         )
         //done setup
+        gsap.to('.video', {
+            y: '280vh',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#scroll-container',
+                start: '0 0',
+                end: 'bottom top ',
+                scrub: true,
+                markers: true,
+                onUpdate: (self) => console.log(self.progress),
+                endTrigger: '.about',
+            },
+        })
 
         return () => {}
     }, [])
 
-    const [color, setColor] = useState('white')
+    const [color, setColor] = useState('black')
+
     return (
-        <div
-            className='asscroll-container'
-            style={{
-                backgroundColor: color,
-            }}
-        >
-            <div id='scroll-container'>
-                {/* Put the body here */}
-                <div className='container'>
-                    <Header color={color} />
-                    <Box
-                        my={4}
-                        style={{ height: '100vh', backgroundColor: 'red' }}
+        <>
+            <div
+                className='asscroll-container'
+                style={{
+                    backgroundColor: color,
+                }}
+            >
+                <div id='scroll-container'>
+                    <div
+                        className='container'
+                        style={{ backgroundColor: color }}
                     >
-                        <Typography variant='h4' component='h1' gutterBottom>
-                            Gatsby v4-beta example
-                        </Typography>
-                    </Box>{' '}
-                    <Box
-                        my={4}
-                        style={{ height: '100vh', backgroundColor: 'blue' }}
-                    >
-                        <Typography variant='h4' component='h1' gutterBottom>
-                            Gatsby v4-beta example
-                        </Typography>
-                    </Box>
+                        <Header color={color} />
+                    </div>{' '}
+                    <Hero color={color} />
+                    <div
+                        className='about'
+                        style={{ height: '100vh', backgroundColor: 'cyan' }}
+                    ></div>
+                    <div
+                        style={{ height: '100vh', backgroundColor: 'white' }}
+                    ></div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

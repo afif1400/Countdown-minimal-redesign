@@ -33,7 +33,7 @@ const theme = createMuiTheme({
             '"Segoe UI Symbol"',
         ].join(','),
         h1: {
-            fontFamily: 'Anton',
+            // fontFamily: 'Anton',
         },
     },
 })

@@ -11,3 +11,10 @@ export const staggerRevealClose = (node1, node2) => {
         },
     })
 }
+
+//Fade in
+export const fadeIn = (node1, duration) => {
+    gsap.to(node1, duration, {
+        opacity: 1,
+    })
+}

@@ -8,6 +8,7 @@ import LogoWhite from '../svgs/LogoWhite.svg'
 import LogoBlack from '../svgs/LogoBlack.svg'
 import Menu from '../svgs/menuBlack.svg'
 import MenuWhite from '../svgs/menuWhite.svg'
+import { fadeIn } from '../utils/Animations'
 
 const Header = ({ color }) => {
     const [menu, setMenu] = useState(false)
@@ -16,7 +17,13 @@ const Header = ({ color }) => {
 
     return (
         <div>
-            <div style={{ height: 96, zIndex: 10, position: 'relative' }}>
+            <div
+                style={{
+                    height: 96,
+                    zIndex: 10,
+                    position: 'relative',
+                }}
+            >
                 <Grid
                     container
                     jusitfy='center'
@@ -53,8 +60,7 @@ const Header = ({ color }) => {
                             </Button>
                         </Grid>{' '}
                         <Grid item>
-                            {!disabled &&
-                                !!!menu &&
+                            {!!!menu &&
                                 (color === 'white' ? (
                                     <LogoBlack style={{ width: 128 }} />
                                 ) : (
