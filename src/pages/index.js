@@ -45,7 +45,10 @@ export default function Index() {
             document.querySelector('#scroll-container')
         )
         //done setup
-        const toMove = window.innerHeight * 2.7 + 96
+        const toMove =
+            window.innerHeight * 1.7 +
+            96 +
+            document.querySelector('.about').offsetHeight
 
         //parallax video
         gsap.to('.video', {
