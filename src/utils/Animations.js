@@ -7,7 +7,7 @@ export const staggerRevealClose = (node1, node2) => {
         height: 0,
         ease: 'power3.inOut',
         stagger: {
-            amount: 0.07,
+            amount: 0.05,
         },
     })
 }

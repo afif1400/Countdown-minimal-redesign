@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 export default function Index() {
     useEffect(() => {
@@ -44,16 +45,17 @@ export default function Index() {
             document.querySelector('#scroll-container')
         )
         //done setup
+        const toMove = window.innerHeight * 2.7 + 96
+
+        //parallax video
         gsap.to('.video', {
-            y: '280vh',
+            y: toMove,
             ease: 'none',
             scrollTrigger: {
                 trigger: '#scroll-container',
                 start: '0 0',
                 end: 'bottom top ',
                 scrub: true,
-                markers: true,
-                onUpdate: (self) => console.log(self.progress),
                 endTrigger: '.about',
             },
         })
@@ -79,10 +81,7 @@ export default function Index() {
                         <Header color={color} />
                     </div>{' '}
                     <Hero color={color} />
-                    <div
-                        className='about'
-                        style={{ height: '100vh', backgroundColor: 'cyan' }}
-                    ></div>
+                    <About color={color} />
                     <div
                         style={{ height: '100vh', backgroundColor: 'white' }}
                     ></div>

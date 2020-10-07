@@ -22,8 +22,9 @@ const Hero = ({ color }) => {
                             variant='h1'
                             style={{
                                 mixBlendMode: 'difference',
-                                color: 'rgba(256,256,256,0.90)',
+                                color: 'rgba(256,256,256,0.96)',
                                 width: '84%',
+                                fontWeight: 200,
                             }}
                         >
                             We can change climate change.
