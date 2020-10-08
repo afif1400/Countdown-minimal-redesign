@@ -23,7 +23,7 @@ const theme = createMuiTheme({
         fontFamily: [
             '-apple-system',
             'BlinkMacSystemFont',
-            'Open Sans',
+            'Inter',
             'Anton',
             '"Segoe UI"',
             '"Helvetica Neue"',

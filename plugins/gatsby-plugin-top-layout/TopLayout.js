@@ -25,6 +25,10 @@ export default function TopLayout(props) {
                     href='https://fonts.googleapis.com/css2?family=Anton&display=swap'
                     rel='stylesheet'
                 ></link>
+                <link
+                    href='https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap'
+                    rel='stylesheet'
+                ></link>
             </Helmet>
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
