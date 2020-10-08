@@ -78,7 +78,7 @@ export default function Index() {
                 scrub: 1,
                 snap: 1 / (4 - 1),
                 // base vertical scrolling on how wide the container is so it feels more natural.
-                markers: true,
+                // markers: true,
                 end: () =>
                     '+=' +
                     document.querySelector('.performanceSlide').offsetWidth,
