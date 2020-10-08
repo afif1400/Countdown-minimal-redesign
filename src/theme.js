@@ -35,6 +35,9 @@ const theme = createMuiTheme({
         h1: {
             // fontFamily: 'Anton',
         },
+        h2: {
+            fontSize: '4.5rem',
+        },
     },
 })
 

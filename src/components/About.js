@@ -1,17 +1,13 @@
 import { Typography, Grid } from '@material-ui/core'
 import React from 'react'
 
+import Images from '../components/Images'
+import { textStyles } from '../constants'
+
 const About = ({ color }) => {
-    const textStyles = {
-        mixBlendMode: 'difference',
-        color: 'rgba(256,256,256,0.96)',
-        width: '84%',
-        textTransform: 'capitalize',
-    }
     return (
         <div
             style={{
-                minHeight: '100vh',
                 backgroundColor: color,
                 paddingTop: 240,
                 paddingBottom: 240,
@@ -30,9 +26,9 @@ const About = ({ color }) => {
                 </Typography>
                 <Grid
                     container
-                    alignItems='center'
+                    alignItems='flex-end'
                     justify='space-between'
-                    style={{ width: '75%', marginTop: 148 }}
+                    style={{ width: '75%', marginTop: 240 }}
                 >
                     <Grid xs item>
                         <Typography
@@ -60,14 +56,14 @@ const About = ({ color }) => {
                             safer, cleaner and fairer for everyone.{' '}
                         </Typography>
                     </Grid>
-                    <Grid xs item>
-                        <Typography
-                            variant='h4'
-                            style={{ ...textStyles, fontWeight: 200 }}
-                            component='span'
-                        >
-                            Countdown launches on 10.10.2020 at 11:00am ET
-                        </Typography>
+                    <Grid
+                        xs
+                        item
+                        style={{ height: '100%' }}
+                        container
+                        justify='flex-end'
+                    >
+                        <Images image='aboutImage1' />
                     </Grid>
                 </Grid>
             </Grid>

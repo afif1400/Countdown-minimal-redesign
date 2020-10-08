@@ -1,0 +1,17 @@
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 640px;
+    height: 640px;
+}
+
+.box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes {
+    position: relative;
+}
