@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const Hero = ({ color }) => {
+const Hero = ({ color, setLoading }) => {
     useEffect(() => {
         return () => {}
     }, [])

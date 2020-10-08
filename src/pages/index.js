@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -67,6 +66,7 @@ export default function Index() {
     }, [])
 
     const [color, setColor] = useState('black')
+    const [loading, setLoading] = useState(true)
 
     return (
         <>
@@ -83,7 +83,11 @@ export default function Index() {
                     >
                         <Header color={color} />
                     </div>{' '}
-                    <Hero color={color} />
+                    <Hero
+                        color={color}
+                        loading={loading}
+                        setLoading={setLoading}
+                    />
                     <About color={color} />
                     <Speakers color={color} />
                     <div style={{ height: 240 }}></div>

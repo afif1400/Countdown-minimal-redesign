@@ -36,6 +36,7 @@ const Images = ({ image, width, children, styles }) => {
         const viewWidth = window.innerWidth
         const wrapWidth = numBoxes * boxWidth
         const wrapVal = gsap.utils.wrap(0, wrapWidth)
+        const offset = boxWidth - window.innerWidth * 0.125 + 24
 
         gsap.set([wrapper], { height: '100vh' })
         gsap.set(boxes, { left: -boxWidth })
@@ -66,7 +67,7 @@ const Images = ({ image, width, children, styles }) => {
             boxes.appendChild(box)
 
             gsap.set(box, {
-                x: i * boxWidth,
+                x: i * boxWidth - offset,
                 width: boxWidth,
                 height: boxHeight,
             })
@@ -90,7 +91,7 @@ const Images = ({ image, width, children, styles }) => {
         Draggable.create(proxy, {
             type: 'x',
             trigger: '.image-wrapper',
-            inertia: true,
+            // inertia: true,
             onDrag: updateProgress,
             onThrowUpdate: updateProgress,
             snap: {

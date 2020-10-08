@@ -28,7 +28,7 @@ const Speakers = ({ color }) => {
                     style={{ width: sectionWidth }}
                 >
                     <Typography variant='h2' style={{ ...textStyles }}>
-                        Meet the curated <br />
+                        Our curated <br />
                         speaker line up
                     </Typography>
                 </Grid>
