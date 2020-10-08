@@ -24,21 +24,20 @@ const Images = ({ image, width, children, styles }) => {
         //Draggable carousel
         gsap.registerPlugin(Draggable)
 
-        const viewport = document.querySelector('.viewport')
         const wrapper = document.querySelector('.image-wrapper')
         const boxes = document.querySelector('.boxes')
         const proxy = document.createElement('div')
 
         const numBoxes = 10
-        const boxWidth = 350
-        const boxHeight = 250
-        const imgWidth = boxWidth - 6
-        const imgHeight = boxHeight - 14
+        const boxWidth = Math.round(0.36 * window.innerWidth)
+        const boxHeight = Math.round(0.84 * window.innerHeight)
+        const imgWidth = boxWidth
+        const imgHeight = boxHeight
         const viewWidth = window.innerWidth
         const wrapWidth = numBoxes * boxWidth
         const wrapVal = gsap.utils.wrap(0, wrapWidth)
 
-        gsap.set([wrapper, viewport], { height: boxHeight, xPercent: -50 })
+        gsap.set([wrapper], { height: '100vh' })
         gsap.set(boxes, { left: -boxWidth })
 
         for (let i = 1; i <= numBoxes; i++) {
@@ -49,20 +48,18 @@ const Images = ({ image, width, children, styles }) => {
                 imgHeight +
                 '?random=' +
                 i
-            const num = document.createElement('div')
-            num.className = 'num'
-            num.innerText = i
 
             const img = document.createElement('img')
             img.src = src
             img.width = imgWidth
             img.height = imgHeight
+            img.style.padding = '24px'
 
             const box = document.createElement('div')
             box.className = 'box'
+            box.paddingRight = 24
 
             box.appendChild(img)
-            box.appendChild(num)
 
             boxes.appendChild(box)
 
@@ -108,7 +105,6 @@ const Images = ({ image, width, children, styles }) => {
         }
 
         function resize() {
-            viewWidth = viewport.offsetWidth
             animation.render(animation.time(), false, true)
         }
 
@@ -188,8 +184,8 @@ const Images = ({ image, width, children, styles }) => {
         return (
             <div
                 style={{
-                    height: 540,
-                    width: '90%',
+                    height: 420,
+                    width: '84%',
                 }}
             >
                 <BackgroundImage

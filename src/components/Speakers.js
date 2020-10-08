@@ -18,7 +18,7 @@ const Speakers = ({ color }) => {
             style={{
                 minHeight: '100vh',
                 backgroundColor: color,
-                paddingTop: 84,
+                paddingTop: 64,
             }}
         >
             <Grid container justify='center'>

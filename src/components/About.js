@@ -26,9 +26,9 @@ const About = ({ color }) => {
                 </Typography>
                 <Grid
                     container
-                    alignItems='flex-end'
+                    alignItems='center'
                     justify='space-between'
-                    style={{ width: '75%', marginTop: 240 }}
+                    style={{ width: '75%', marginTop: 224 }}
                 >
                     <Grid xs item>
                         <Typography

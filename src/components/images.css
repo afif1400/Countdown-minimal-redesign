@@ -1,8 +1,9 @@
 .image-wrapper {
     position: relative;
     overflow: hidden;
-    width: 640px;
+    width: 100vw;
     height: 640px;
+    margin-top: 84px;
 }
 
 .box {
