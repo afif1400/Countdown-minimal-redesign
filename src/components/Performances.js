@@ -5,9 +5,63 @@ import Typography from '@material-ui/core/Typography'
 import { sectionWidth, textStyles } from '../constants'
 import Images from './Images'
 import band from '../images/band.jpg'
+import stage from '../images/stage.jpg'
+import book from '../images/book.jpg'
+import guitar from '../images/guitar.jpg'
 
 const Performances = ({ color }) => {
-    const numSlide = 4
+    const backgroundImage = {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        height: '100%',
+        width: '50vw',
+    }
+
+    const innerText = (title, content) => {
+        return (
+            <div
+                style={{
+                    position: 'absolute',
+                    backgroundColor: 'rgba(0,0,0,0.42)',
+                    width: '100%',
+                    height: '100%',
+                }}
+            >
+                <Grid
+                    container
+                    style={{ width: '100%', height: '84%' }}
+                    alignItems='flex-end'
+                    justify='center'
+                >
+                    <div style={{ width: '75%', height: '36%' }}>
+                        <Typography
+                            variant='h2'
+                            style={{
+                                fontFamily: 'Open Sans',
+                                fontWeight: 400,
+                                color: 'white',
+                            }}
+                        >
+                            {title}
+                        </Typography>
+                        <Typography
+                            variant='h5'
+                            style={{
+                                fontFamily: 'Open Sans',
+                                fontWeight: 300,
+                                color: 'white',
+                                marginTop: 64,
+                            }}
+                        >
+                            {content}
+                        </Typography>
+                    </div>
+                </Grid>
+            </div>
+        )
+    }
     return (
         <>
             <Grid
@@ -49,34 +103,50 @@ const Performances = ({ color }) => {
                 <div
                     className='slide'
                     style={{
-                        height: '100%',
-                        width: '50vw',
                         backgroundImage: `url(${band})`,
-                        backgroundSize: 'cover',
+                        ...backgroundImage,
+                    }}
+                >
+                    {innerText(
+                        'Sour Candy',
+                        <>
+                            Sour Candy is a pop rock band based out of
+                            Bangalore. They were formed in 2018 by a group of
+                            college students and they’ve performed at various
+                            Battle of Bands around Bangalore and have also
+                            performed shows for various events at their college,
+                            PES University.
+                        </>
+                    )}
+                </div>
+                <div
+                    className='slide'
+                    style={{
+                        backgroundImage: `url(${stage})`,
+                        ...backgroundImage,
+                    }}
+                >
+                    {innerText(
+                        'The BisiBeleBois',
+                        <>
+                            The BisiBeleBois are an Improv Comedy trio based out
+                            of Bangalore. They are the Youngest Improv Comedy
+                            team in India.
+                        </>
+                    )}
+                </div>
+                <div
+                    className='slide'
+                    style={{
+                        backgroundImage: `url(${book})`,
+                        ...backgroundImage,
                     }}
                 ></div>
                 <div
                     className='slide'
                     style={{
-                        height: '100%',
-                        width: '50vw',
-                        backgroundImage: `url(${band})`,
-                        backgroundSize: 'cover',
-                    }}
-                ></div>
-                <div
-                    className='slide'
-                    style={{
-                        height: '100%',
-                        width: '50vw',
-                        backgroundColor: 'blue',
-                    }}
-                ></div>
-                <div
-                    style={{
-                        backgroundColor: 'red',
-                        height: '100%',
-                        width: '50vw',
+                        backgroundImage: `url(${guitar})`,
+                        ...backgroundImage,
                     }}
                 ></div>
             </div>
