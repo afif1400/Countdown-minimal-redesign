@@ -6,7 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import gsap from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 
-import './images.css'
+import '../styles/images.css'
 
 const Images = ({ image, width, children, styles }) => {
     const [backPos, setBackPos] = useState(35)
@@ -30,7 +30,7 @@ const Images = ({ image, width, children, styles }) => {
 
         const numBoxes = 10
         const boxWidth = Math.round(0.36 * window.innerWidth)
-        const boxHeight = Math.round(0.84 * window.innerHeight)
+        const boxHeight = Math.round(0.82 * window.innerHeight)
         const imgWidth = boxWidth
         const imgHeight = boxHeight
         const viewWidth = window.innerWidth
