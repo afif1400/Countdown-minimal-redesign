@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import '../styles/hero.css'
+
 const Hero = ({ color, setLoading }) => {
     useEffect(() => {
         return () => {}
@@ -42,11 +44,12 @@ const Hero = ({ color, setLoading }) => {
                     <iframe
                         className='video'
                         style={{
-                            height: '100vh',
-                            width: '100%',
+                            height: '56.25vw',
+                            width: '177.77777778vh',
                             position: 'absolute',
                             top: 0,
                             zIndex: -1,
+                            minWidth: '100%',
                         }}
                         src='https://player.vimeo.com/video/230738063?autoplay=1&loop=1&background=1'
                         frameborder='0'

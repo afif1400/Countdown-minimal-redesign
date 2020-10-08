@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import About from '../components/About'
-import { Hero, Speakers } from '../components'
+import { Hero, Speakers, Performances } from '../components'
 
 export default function Index() {
     useEffect(() => {
@@ -90,7 +90,8 @@ export default function Index() {
                     />
                     <About color={color} />
                     <Speakers color={color} />
-                    <div style={{ height: 240 }}></div>
+                    <Performances color={color} />
+                    <div style={{ height: 480 }}></div>
                 </div>
             </div>
         </>
