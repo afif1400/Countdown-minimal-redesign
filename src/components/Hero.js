@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -31,6 +32,21 @@ const Hero = ({ color, setLoading }) => {
                         >
                             We can change climate change.
                         </Typography>
+                        <div style={{ width: '84%', marginTop: 48 }}>
+                            <Typography
+                                component='span'
+                                variant='h6'
+                                style={{
+                                    mixBlendMode: 'difference',
+                                    color: 'yellow',
+
+                                    fontWeight: 200,
+                                }}
+                            >
+                                {/* Save your seat */}
+                            </Typography>
+                            <div style={{ display: 'inline' }}>Icon</div>
+                        </div>
                     </Grid>
                 </Grid>
                 <div

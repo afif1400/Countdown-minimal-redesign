@@ -27,7 +27,10 @@ const Speakers = ({ color }) => {
                     justify='space-between'
                     style={{ width: sectionWidth }}
                 >
-                    <Typography variant='h2' style={{ ...textStyles }}>
+                    <Typography
+                        variant='h2'
+                        style={{ ...textStyles, paddingBottom: 84 }}
+                    >
                         Our curated <br />
                         speaker line up
                     </Typography>

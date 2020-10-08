@@ -18,7 +18,12 @@ const About = ({ color }) => {
                 <Typography
                     component='span'
                     variant='h2'
-                    style={{ ...textStyles, fontWeight: 200, color: 'white' }}
+                    style={{
+                        ...textStyles,
+                        fontWeight: 200,
+                        color: 'white',
+                        textTransform: 'capitalize',
+                    }}
                     align='center'
                 >
                     Join the Countdown to a <br />
@@ -35,7 +40,7 @@ const About = ({ color }) => {
                             variant='h4'
                             style={{
                                 ...textStyles,
-                                fontWeight: 200,
+                                fontWeight: 300,
                             }}
                         >
                             Countdown is a global initiative to champion and
@@ -46,14 +51,17 @@ const About = ({ color }) => {
                             variant='h6'
                             style={{
                                 ...textStyles,
-                                fontWeight: 100,
+                                fontWeight: 200,
                                 marginTop: 48,
                             }}
                         >
-                            <strong>The goal: </strong>To build a better future
-                            by cutting greenhouse gas emissions in half by 2030
-                            in the race to a zero-carbon world – a world that is
-                            safer, cleaner and fairer for everyone.{' '}
+                            <p style={{ fontWeight: 400, display: 'inline' }}>
+                                The goal:{' '}
+                            </p>
+                            To build a better future by cutting greenhouse gas
+                            emissions in half by 2030 in the race to a
+                            zero-carbon world – a world that is safer, cleaner
+                            and fairer for everyone.{' '}
                         </Typography>
                     </Grid>
                     <Grid

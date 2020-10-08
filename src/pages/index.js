@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import About from '../components/About'
-import { Hero, Speakers, Performances } from '../components'
+import { Hero, Speakers, Performances, Form } from '../components'
 
 export default function Index() {
     useEffect(() => {
@@ -37,7 +37,12 @@ export default function Index() {
             },
         })
         asscroll.on('raf', ScrollTrigger.update)
+        asscroll.on('scroll', ScrollTrigger.update)
         ScrollTrigger.addEventListener('refresh', () => asscroll.onResize())
+        ScrollTrigger.addEventListener('scrollStart', () => {
+            return asscroll.onResize()
+        })
+
         asscroll.enable(
             false,
             true,
@@ -59,10 +64,40 @@ export default function Index() {
                 end: 'bottom top ',
                 scrub: true,
                 endTrigger: '.about',
+                onLeave: () => ScrollTrigger.refresh(),
             },
         })
 
-        return () => {}
+        gsap.to('.slide', {
+            xPercent: -100 * 2,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.performanceSlide',
+                pin: true,
+                // pinReparent: true,
+                scrub: 1,
+                snap: 1 / (4 - 1),
+                // base vertical scrolling on how wide the container is so it feels more natural.
+                markers: true,
+                end: () =>
+                    '+=' +
+                    document.querySelector('.performanceSlide').offsetWidth,
+            },
+        })
+        gsap.to('.form', 0.6, {
+            scrollTrigger: {
+                trigger: '.form',
+                // markers: true,
+                start: 'top top',
+                end: 'bottom bottom ',
+                onEnter: () => setColor('#f1ff39'),
+                onLeaveBack: () => setColor('black'),
+            },
+        })
+
+        return () => {
+            asscroll.off('scroll', ScrollTrigger.update)
+        }
     }, [])
 
     const [color, setColor] = useState('black')
@@ -91,7 +126,10 @@ export default function Index() {
                     <About color={color} />
                     <Speakers color={color} />
                     <Performances color={color} />
-                    <div style={{ height: 480 }}></div>
+                    <Form color={color} />
+                    <div
+                        style={{ height: '100vh', backgroundColor: 'white' }}
+                    ></div>
                 </div>
             </div>
         </>

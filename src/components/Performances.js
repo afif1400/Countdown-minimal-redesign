@@ -3,17 +3,21 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 import { sectionWidth, textStyles } from '../constants'
+import Images from './Images'
+import band from '../images/band.jpg'
 
 const Performances = ({ color }) => {
+    const numSlide = 4
     return (
-        <div>
+        <>
             <Grid
                 container
-                justify='center'
+                alignItems='center'
                 style={{
                     backgroundColor: color,
-                    paddingTop: 240,
+                    marginTop: 180,
                 }}
+                direction='column'
             >
                 <Grid container style={{ width: sectionWidth }}>
                     <Typography
@@ -22,16 +26,61 @@ const Performances = ({ color }) => {
                             ...textStyles,
                             width: '100%',
                             fontWeight: 200,
+                            paddingBottom: 96,
                         }}
                         align='left'
                     >
-                        Don't miss out on the Performances and activities we
-                        have prepared for you
+                        We even invited a few
+                        <br /> performers to the event
                     </Typography>
                 </Grid>
-                <div style={{ height: '100vh' }}></div>
             </Grid>
-        </div>
+            <div
+                style={{
+                    height: '100vh',
+
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flexDirection: 'column',
+                    position: 'relative',
+                }}
+                className='performanceSlide'
+            >
+                <div
+                    className='slide'
+                    style={{
+                        height: '100%',
+                        width: '50vw',
+                        backgroundImage: `url(${band})`,
+                        backgroundSize: 'cover',
+                    }}
+                ></div>
+                <div
+                    className='slide'
+                    style={{
+                        height: '100%',
+                        width: '50vw',
+                        backgroundImage: `url(${band})`,
+                        backgroundSize: 'cover',
+                    }}
+                ></div>
+                <div
+                    className='slide'
+                    style={{
+                        height: '100%',
+                        width: '50vw',
+                        backgroundColor: 'blue',
+                    }}
+                ></div>
+                <div
+                    style={{
+                        backgroundColor: 'red',
+                        height: '100%',
+                        width: '50vw',
+                    }}
+                ></div>
+            </div>
+        </>
     )
 }
 

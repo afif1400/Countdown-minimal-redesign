@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 
 import '../styles/images.css'
+import { Grid } from '@material-ui/core'
 
 const Images = ({ image, width, children, styles }) => {
     const [backPos, setBackPos] = useState(35)
@@ -38,7 +39,7 @@ const Images = ({ image, width, children, styles }) => {
         const wrapVal = gsap.utils.wrap(0, wrapWidth)
         const offset = boxWidth - window.innerWidth * 0.125 + 24
 
-        gsap.set([wrapper], { height: '100vh' })
+        gsap.set([wrapper], { height: '100%' })
         gsap.set(boxes, { left: -boxWidth })
 
         for (let i = 1; i <= numBoxes; i++) {
@@ -163,6 +164,13 @@ const Images = ({ image, width, children, styles }) => {
                     }
                 }
             }
+            band: file(relativePath: { eq: "band.jpg" }) {
+                childImageSharp {
+                    fluid(maxWidth: 1080) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
     `)
 
@@ -180,20 +188,20 @@ const Images = ({ image, width, children, styles }) => {
     }
 
     if (image === 'aboutImage1') {
-        if (!data?.aboutImage1?.childImageSharp?.fluid) {
+        if (!data?.aboutImage2?.childImageSharp?.fluid) {
             return <div>Picture not found</div>
         }
 
         return (
             <div
                 style={{
-                    height: 420,
+                    height: '100%',
                     width: '84%',
                 }}
             >
                 <BackgroundImage
                     Tag='div'
-                    fluid={data.aboutImage1.childImageSharp.fluid}
+                    fluid={data.aboutImage2.childImageSharp.fluid}
                     backgroundColor={`#f1ff39`}
                     style={{
                         height: '100%',
@@ -292,6 +300,28 @@ const Images = ({ image, width, children, styles }) => {
                     }}
                 ></div>
             </BackgroundImage>
+        )
+    }
+
+    if (image === 'band') {
+        if (!data?.band?.childImageSharp?.fluid) {
+            return <div>Picture not found</div>
+        }
+        return (
+            <div
+                style={{
+                    display: 'flex',
+                    height: '100vh',
+                    width: '50vw',
+                    position: 'relative',
+                }}
+                className='slide'
+            >
+                <Img
+                    style={{ height: '100%', width: '100%' }}
+                    fluid={data.band.childImageSharp.fluid}
+                />
+            </div>
         )
     }
 

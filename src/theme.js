@@ -22,7 +22,7 @@ const theme = createMuiTheme({
         fontFamily: [
             '-apple-system',
             'BlinkMacSystemFont',
-            'Inter',
+            'Open Sans',
             'Anton',
             '"Segoe UI"',
             '"Helvetica Neue"',
@@ -33,11 +33,9 @@ const theme = createMuiTheme({
             '"Segoe UI Symbol"',
         ].join(','),
         h1: {
-            // fontFamily: 'Anton',
+            fontFamily: 'Anton',
         },
-        h2: {
-            fontSize: '4.5rem',
-        },
+        h2: { fontFamily: 'Anton', fontSize: '5rem' },
     },
 })
 
