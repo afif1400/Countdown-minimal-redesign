@@ -69,7 +69,7 @@ const Performances = ({ color }) => {
                 alignItems='center'
                 style={{
                     backgroundColor: color,
-                    marginTop: 180,
+                    marginTop: 164,
                 }}
                 direction='column'
             >
@@ -80,12 +80,12 @@ const Performances = ({ color }) => {
                             ...textStyles,
                             width: '100%',
                             fontWeight: 200,
-                            paddingBottom: 96,
+                            paddingBottom: 360,
                         }}
-                        align='left'
+                        align='center'
                     >
-                        We even invited a few
-                        <br /> performers to the event
+                        We even invited a few <br />
+                        performers to the event
                     </Typography>
                 </Grid>
             </Grid>
@@ -108,14 +108,14 @@ const Performances = ({ color }) => {
                     }}
                 >
                     {innerText(
-                        'Sour Candy',
+                        <div>
+                            Sour <br /> Candy
+                        </div>,
                         <>
                             Sour Candy is a pop rock band based out of
                             Bangalore. They were formed in 2018 by a group of
                             college students and they’ve performed at various
-                            Battle of Bands around Bangalore and have also
-                            performed shows for various events at their college,
-                            PES University.
+                            Battle of Bands around Bangalore .
                         </>
                     )}
                 </div>
@@ -127,7 +127,9 @@ const Performances = ({ color }) => {
                     }}
                 >
                     {innerText(
-                        'The BisiBeleBois',
+                        <div>
+                            The <br /> BisiBeleBois
+                        </div>,
                         <>
                             The BisiBeleBois are an Improv Comedy trio based out
                             of Bangalore. They are the Youngest Improv Comedy
