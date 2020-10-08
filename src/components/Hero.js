@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import '../styles/hero.css'
+import Countdown from '../svgs/Countdown.svg'
 
 const Hero = ({ color, setLoading }) => {
     useEffect(() => {
@@ -72,6 +72,27 @@ const Hero = ({ color, setLoading }) => {
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture ; fullscreen;'
                         allowfullscreen
                     ></iframe>
+
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'rgba(0,0,0,0.40)',
+                        }}
+                    >
+                        <Grid
+                            container
+                            justify='center'
+                            alignItems='center'
+                            style={{ width: '100%', height: '100%' }}
+                            direction='column'
+                        >
+                            <Typography variant='h6' style={{ color: 'white' }}>
+                                Presenting
+                            </Typography>{' '}
+                            <Countdown width='25%' />
+                        </Grid>
+                    </div>
                 </div>
             </div>
         </>

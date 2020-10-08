@@ -141,14 +141,33 @@ const Performances = ({ color }) => {
                         backgroundImage: `url(${book})`,
                         ...backgroundImage,
                     }}
-                ></div>
+                >
+                    {' '}
+                    {innerText(
+                        'Prajwal Vishwanath',
+                        <>
+                            A spoken word poet and a member of the Write Angle
+                            Club. Because everyone sees the same Words, but
+                            everyone sees through Different Eyes.
+                        </>
+                    )}
+                </div>
                 <div
                     className='slide'
                     style={{
                         backgroundImage: `url(${guitar})`,
                         ...backgroundImage,
                     }}
-                ></div>
+                >
+                    {' '}
+                    {innerText(
+                        ' Pranav and Ridhima',
+                        <>
+                            A duo with a passion and love for music. Watch them
+                            perform something mesmerizing.
+                        </>
+                    )}
+                </div>
             </div>
         </>
     )
