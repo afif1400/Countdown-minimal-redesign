@@ -53,9 +53,11 @@ const Images = ({ image, width, children, styles }) => {
             img.src = src
             img.width = imgWidth
             img.height = imgHeight
-            img.style.padding = '24px'
+            img.style.paddingLeft = '24px'
+            img.style.paddingRight = '24px'
 
             const box = document.createElement('div')
+
             box.className = 'box'
             box.paddingRight = 24
 

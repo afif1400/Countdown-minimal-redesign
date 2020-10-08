@@ -35,7 +35,7 @@ const Hero = ({ color }) => {
                     style={{
                         height: '100vh',
                         backgroundColor: 'transparent',
-
+                        width: '100%',
                         overflow: 'hidden',
                     }}
                 >
@@ -48,9 +48,9 @@ const Hero = ({ color }) => {
                             top: 0,
                             zIndex: -1,
                         }}
-                        src='https://www.youtube.com/embed/D37aDfmWBag'
+                        src='https://player.vimeo.com/video/230738063?autoplay=1&loop=1&background=1'
                         frameborder='0'
-                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture ; fullscreen;'
                         allowfullscreen
                     ></iframe>
                 </div>
