@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -28,24 +29,37 @@ const Hero = ({ color, setLoading }) => {
                                 color: 'rgba(256,256,256,0.96)',
                                 width: '84%',
                                 fontWeight: 200,
+                                textTransform: 'uppercase',
+                                paddingTop: 48,
                             }}
                         >
                             We can change climate change.
                         </Typography>
-                        <div style={{ width: '84%', marginTop: 48 }}>
+                        <div style={{ width: '84%', marginTop: 8 }}>
                             <Typography
                                 component='span'
                                 variant='h6'
                                 style={{
                                     mixBlendMode: 'difference',
-                                    color: 'yellow',
+                                    color: 'white',
 
                                     fontWeight: 200,
                                 }}
                             >
-                                {/* Save your seat */}
+                                Register for the main event on 17.10.20. Don't
+                                forget to join the watch party for the official
+                                launch of Countdown on 10.10.20
                             </Typography>
                             <div style={{ display: 'inline' }}>Icon</div>
+                        </div>
+                        <div style={{ width: '84%', marginTop: 48 }}>
+                            <Button
+                                color='primary'
+                                variant='outlined'
+                                size='large'
+                            >
+                                Register now
+                            </Button>
                         </div>
                     </Grid>
                 </Grid>

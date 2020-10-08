@@ -29,10 +29,14 @@ const Speakers = ({ color }) => {
                 >
                     <Typography
                         variant='h2'
-                        style={{ ...textStyles, paddingBottom: 84 }}
+                        style={{
+                            ...textStyles,
+                            paddingBottom: 84,
+                            textTransform: 'uppercase',
+                        }}
                     >
-                        Our curated <br />
-                        speaker line up
+                        Meet the <br />
+                        event speakers
                     </Typography>
                 </Grid>
                 <Grid

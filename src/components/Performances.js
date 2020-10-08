@@ -81,6 +81,7 @@ const Performances = ({ color }) => {
                             width: '100%',
                             fontWeight: 200,
                             paddingBottom: 360,
+                            textTransform: 'uppercase',
                         }}
                         align='center'
                     >

@@ -22,7 +22,7 @@ const About = ({ color }) => {
                         ...textStyles,
                         fontWeight: 200,
                         color: 'white',
-                        textTransform: 'capitalize',
+                        textTransform: 'uppercase',
                     }}
                     align='center'
                 >

@@ -1,11 +1,12 @@
 import { red } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, withStyles } from '@material-ui/core/styles'
+import TextField from '@material-ui/core/TextField'
 
 // A custom theme for this app
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#ffffff',
+            main: '#f1ff39',
             yellow: '#f1ff39',
         },
         secondary: {
@@ -41,5 +42,28 @@ const theme = createMuiTheme({
         },
     },
 })
+
+export const PrimaryTextField = withStyles((theme) => ({
+    root: {
+        '& label.Mui-focused': {
+            color: 'black',
+            fontWeight: 700,
+        },
+
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'black',
+            },
+            '&:hover fieldset': {
+                boxShadow: '0 0  18px rgba(0, 0, 0,0.1)',
+                borderColor: 'black',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: 'black',
+            },
+        },
+        borderColor: 'black',
+    },
+}))(TextField)
 
 export default theme
