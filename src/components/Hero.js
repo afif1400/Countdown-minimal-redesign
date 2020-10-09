@@ -17,10 +17,10 @@ const Hero = ({ color, setLoading }) => {
             <div style={{ height: '170vh' }} className='hero'>
                 <Grid
                     container
-                    style={{ height: '70vh', backgroundColor: color }}
+                    style={{ height: '70vh',transition:"0.5s",backgroundColor: color }}
                     alignItems='center'
                 >
-                    <Grid item container justify='center'>
+                    <Grid item container justify='center' style={{transition:"0.5s"}}>
                         <Typography
                             component='span'
                             variant='h1'
@@ -31,6 +31,7 @@ const Hero = ({ color, setLoading }) => {
                                 fontWeight: 200,
                                 textTransform: 'uppercase',
                                 paddingTop: 48,
+                              transition:"0.4s"
                             }}
                         >
                             We can change climate change.
@@ -76,10 +77,10 @@ const Hero = ({ color, setLoading }) => {
                             transform: 'translate3d(-50%,0,0)',
                         }}
                         src='https://player.vimeo.com/video/230738063?autoplay=1&loop=1&background=1'
-                        frameborder='0'
+                        frameBorder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture ; fullscreen;'
-                        allowfullscreen
-                    ></iframe>
+                        allowFullScreen
+                    />
 
                     <div
                         style={{
@@ -97,8 +98,8 @@ const Hero = ({ color, setLoading }) => {
                         >
                             <Typography variant='h6' style={{ color: 'white' }}>
                                 Presenting
-                            </Typography>{' '}
-                            <Countdown width='25%' />
+                            </Typography>
+                            <Countdown width='35%' />
                         </Grid>
                     </div>
                 </div>

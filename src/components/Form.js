@@ -8,7 +8,7 @@ import CountDown from './Countdown'
 
 const Form = ({ color }) => {
     return (
-        <Grid container className='form'>
+        <Grid container className='form' style={{transition:"0.5s"}}>
             <Grid
                 container
                 style={{ height: '100vh' }}

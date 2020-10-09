@@ -63,9 +63,30 @@ const Images = ({ image, width, children, styles }) => {
             box.className = 'box'
             box.paddingRight = 24
 
+            const speakerInfo = document.createElement("div")
+
+            speakerInfo.className="speakerInfo"
+
+            const name = document.createElement('p')
+
+            speakerInfo.appendChild(name)
+
+            name.innerHTML="Speaker Name"
+            name.className="name"
+            const position = document.createElement('p')
+
+            speakerInfo.appendChild(position)
+
+            position.innerHTML="Speaker designation"
+            position.className="position"
+
             box.appendChild(img)
+            box.appendChild(speakerInfo)
+
 
             boxes.appendChild(box)
+
+
 
             gsap.set(box, {
                 x: i * boxWidth - offset,
@@ -115,7 +136,6 @@ const Images = ({ image, width, children, styles }) => {
         return () => {}
     }, [])
 
-    console.log(width)
     const overlay = 0.24
     const image1 = useRef()
     const image2 = useRef()
@@ -206,7 +226,6 @@ const Images = ({ image, width, children, styles }) => {
                     style={{
                         height: '100%',
                         width: '100%',
-
                         position: 'relative',
                         backgroundPosition: `center ${backPos}%`,
                     }}
@@ -221,7 +240,7 @@ const Images = ({ image, width, children, styles }) => {
                             zIndex: 2,
                             backgroundColor: `rgba(0,0,0,${overlay})`,
                         }}
-                    ></div>
+                    />
                 </BackgroundImage>
             </div>
         )
@@ -331,8 +350,8 @@ const Images = ({ image, width, children, styles }) => {
         }
         return (
             <>
-                <div class='image-wrapper'>
-                    <div class='boxes'></div>
+                <div className='image-wrapper'>
+                    <div className='boxes'/>
                 </div>
             </>
         )

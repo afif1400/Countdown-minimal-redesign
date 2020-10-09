@@ -5,6 +5,7 @@
     "dependencies": {
         "@ashthornton/asscroll": "^1.6.4",
         "@material-ui/core": "latest",
+        "@material-ui/icons": "^4.9.1",
         "@material-ui/styles": "latest",
         "gatsby": "latest",
         "gatsby-background-image": "^1.1.2",
@@ -15,6 +16,7 @@
         "gatsby-plugin-react-svg": "^3.0.0",
         "gatsby-plugin-sass": "^2.3.16",
         "gatsby-plugin-sharp": "^2.6.39",
+        "gatsby-plugin-smoothscroll": "^1.2.0",
         "gatsby-source-filesystem": "^2.3.33",
         "gatsby-transformer-sharp": "^2.5.17",
         "gsap": "^3.5.1",

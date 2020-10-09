@@ -8,10 +8,30 @@
 .box {
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
 .boxes {
     position: relative;
+}
+
+.speakerInfo{
+    width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-right: 24px;
+}
+
+.name{
+    color: white;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+.position{
+    font-weight: lighter;''
+    margin-top: 0;
+    color: white;
 }

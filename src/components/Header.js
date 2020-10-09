@@ -3,7 +3,6 @@ import HamburgerMenu from './HamburgerMenu'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-
 import LogoWhite from '../svgs/LogoWhite.svg'
 import LogoBlack from '../svgs/LogoBlack.svg'
 import Menu from '../svgs/menuBlack.svg'
@@ -33,6 +32,7 @@ const Header = ({ color }) => {
                     <Grid container justify='space-between' alignItems='center'>
                         <Grid item>
                             <Button
+                                sm={3}
                                 style={{ padding: 0, margin: 0 }}
                                 disabled={disabled}
                                 onClick={() => {
@@ -66,7 +66,7 @@ const Header = ({ color }) => {
                                 size='large'
                                 style={{
                                     fontSize: '1rem',
-                                    marginLeft: 32,
+
                                 }}
                             >
                                 Register Now
@@ -79,7 +79,7 @@ const Header = ({ color }) => {
                                 ) : (
                                     <LogoWhite
                                         style={{ width: 128 }}
-                                    ></LogoWhite>
+                                    />
                                 ))}
                         </Grid>
                     </Grid>

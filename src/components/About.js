@@ -13,6 +13,7 @@ const About = ({ color }) => {
                 paddingBottom: 240,
             }}
             className='about'
+            id="about"
         >
             <Grid container justify='center'>
                 <Typography
@@ -29,11 +30,8 @@ const About = ({ color }) => {
                     Join the Countdown to a <br />
                     zero carbon world
                 </Typography>
-                <Grid
-                    container
-                    alignItems='center'
-                    justify='space-between'
-                    style={{ width: '75%', marginTop: 224 }}
+                <div className="container"
+                    style={{ width: '75%', marginTop: 224,display:"flex",flexWrap:"wrap" }}
                 >
                     <Grid xs item>
                         <Typography
@@ -45,7 +43,7 @@ const About = ({ color }) => {
                         >
                             Countdown is a global initiative to champion and
                             accelerate solutions to the climate crisis, turning
-                            ideas into action.{' '}
+                            ideas into action.
                         </Typography>
                         <Typography
                             variant='h6'
@@ -56,12 +54,12 @@ const About = ({ color }) => {
                             }}
                         >
                             <p style={{ fontWeight: 400, display: 'inline' }}>
-                                The goal:{' '}
+                                The goal:
                             </p>
                             To build a better future by cutting greenhouse gas
                             emissions in half by 2030 in the race to a
                             zero-carbon world – a world that is safer, cleaner
-                            and fairer for everyone.{' '}
+                            and fairer for everyone.
                         </Typography>
                     </Grid>
                     <Grid
@@ -73,7 +71,7 @@ const About = ({ color }) => {
                     >
                         <Images image='aboutImage1' />
                     </Grid>
-                </Grid>
+                </div>
             </Grid>
         </div>
     )
