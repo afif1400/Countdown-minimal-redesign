@@ -35,17 +35,13 @@ const Form = ({ color }) => {
                 >
                     We need your help
                 </Typography>
-                <Typography
-                    variant='h5'
-                    style={{
-                        color: `${color === '#f1ff39' ? 'black' : 'white'}`,
-                        marginTop: 16,
-                    }}
-                >
-                    Time is running out!
-                </Typography>
+
                 <div style={{ marginTop: 48 }}></div>
-                <CountDown targetDate='Oct 10, 2020' targetTime='18:00:00' />
+                <CountDown
+                    targetDate='Oct 10, 2020'
+                    targetTime='18:00:00'
+                    color={color}
+                />
             </Grid>
             <Grid
                 container

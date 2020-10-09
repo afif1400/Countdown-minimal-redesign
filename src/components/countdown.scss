@@ -1,5 +1,5 @@
 .timerWrapper {
-    background-color: #fff;
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,6 @@
     display: inline-flex;
     justify-content: center;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .entry {
@@ -35,12 +34,12 @@
         min-width: 80px;
         color: #fff;
         margin-top: 10px;
-        font-weight: bold;
+        font-weight: 500;
     }
 }
 
 .count {
-    background-color: #202020;
+    background-color: black;
     color: #fff;
     display: block;
     font-size: 2em;

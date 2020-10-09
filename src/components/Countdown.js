@@ -22,7 +22,7 @@ class CountDown extends Component {
     }
 
     setDate = () => {
-        const { targetDate, targetTime } = this.props,
+        const { targetDate, targetTime, color } = this.props,
             // Get todays date and time
             now = new Date().getTime(),
             // Set the date we're counting down to
@@ -61,7 +61,7 @@ class CountDown extends Component {
 
     render() {
         const { remaining, isExpired } = this.state,
-            { targetDate, targetTime } = this.props
+            { targetDate, targetTime, color } = this.props
 
         return (
             <Fragment>
@@ -70,7 +70,11 @@ class CountDown extends Component {
                         <div className='counter'>
                             {Object.entries(remaining).map((el, i) => (
                                 <div key={i} className='entry'>
-                                    <div key={el[1]} className='entry-value'>
+                                    <div
+                                        key={el[1]}
+                                        className='entry-value'
+                                        style={{ fontFamily: 'Anton' }}
+                                    >
                                         <span className='count top curr flipTop'>
                                             {el[1] + 1}
                                         </span>
@@ -84,7 +88,17 @@ class CountDown extends Component {
                                             {el[1] + 1}
                                         </span>
                                     </div>
-                                    <div className='entry-title'>
+                                    <div
+                                        className='entry-title'
+                                        style={{
+                                            fontFamily: 'Inter',
+                                            color: `${
+                                                color === '#f1ff39'
+                                                    ? 'black'
+                                                    : 'white'
+                                            }`,
+                                        }}
+                                    >
                                         {el[0].toUpperCase()}
                                     </div>
                                 </div>
@@ -98,7 +112,5 @@ class CountDown extends Component {
         )
     }
 }
-
-const app = <CountDown targetDate='Oct 10, 2020' targetTime='18:00:00' />
 
 export default CountDown
