@@ -14,9 +14,11 @@ const Form = ({ color }) => {
                 alignItems='center'
                 justify='center'
                 style={{
-                    height: '100vh',
+                    minHeight: '100vh',
                     backgroundColor: color,
                     width: '100%',
+                    paddingTop: 84,
+                    paddingBottom: 84,
                 }}
                 className='form'
             >
@@ -32,75 +34,110 @@ const Form = ({ color }) => {
                 >
                     <Typography
                         component='span'
+                        variant='h1'
                         style={{
                             color: `${color === '#f1ff39' ? 'black' : 'white'}`,
                             fontFamily: 'Inter',
-                            fontSize: '7rem',
+                            fontWeight: 400,
                         }}
                     >
-                        My name is
-                        <input
-                            type='email'
-                            name='EMAIL'
-                            id='mce-EMAIL'
-                            variant='outlined'
-                            required
-                            label='Email'
+                        <div
                             style={{
-                                width: '36%',
-                                border: 0,
-                                background: 'transparent',
-                                outline: 0,
-                                borderBottom: `4px solid ${
-                                    color === '#f1ff39' ? 'black' : 'white'
-                                }`,
-                                fontSize: '5rem',
-                                marginLeft: 32,
-                                display: 'inline',
+                                display: 'grid',
+                                gridTemplateColumns: 'auto 1fr auto',
                             }}
-                        />{' '}
-                        <span>,</span>
+                        >
+                            <span>My name is</span>
+                            <input
+                                type='email'
+                                name='EMAIL'
+                                id='mce-EMAIL'
+                                variant='outlined'
+                                required
+                                label='Email'
+                                style={{
+                                    width: '100%',
+                                    border: 0,
+                                    background: 'transparent',
+                                    outline: 0,
+                                    borderBottom: `4px solid ${
+                                        color === '#f1ff39' ? 'black' : 'white'
+                                    }`,
+                                    fontSize: '6rem',
+
+                                    display: 'inline-block',
+                                    marginLeft: 32,
+                                }}
+                            />
+                            <span>,</span>
+                        </div>
                     </Typography>
                     <Typography
                         component='span'
+                        variant='h1'
                         style={{
                             color: `${color === '#f1ff39' ? 'black' : 'white'}`,
                             fontFamily: 'Inter',
-                            fontSize: '7rem',
+                            fontWeight: 400,
                         }}
                     >
-                        here's my email
-                        <input
-                            type='name'
-                            name='FNAME'
-                            id='mce-FNAME'
-                            variant='outlined'
-                            required
-                            label='Name'
+                        <div
                             style={{
-                                width: '36%',
-                                border: 0,
-                                background: 'transparent',
-                                outline: 0,
-                                borderBottom: `4px solid ${
-                                    color === '#f1ff39' ? 'black' : 'white'
-                                }`,
-                                fontSize: '5rem',
-                                marginLeft: 32,
+                                display: 'grid',
+                                gridTemplateColumns: 'auto 1fr',
                             }}
-                        />
-                        and I would like to
-                    </Typography>
-
-                    <Grid item xs style={{ height: '100%' }}>
-                        <Button
-                            id='mc-embedded-subscribe'
-                            type='submit'
-                            size='large'
                         >
-                            Register
+                            <span>here's my email</span>
+                            <input
+                                type='name'
+                                name='FNAME'
+                                id='mce-FNAME'
+                                variant='outlined'
+                                required
+                                label='Name'
+                                style={{
+                                    width: '100%',
+                                    border: 0,
+                                    background: 'transparent',
+                                    outline: 0,
+                                    borderBottom: `4px solid ${
+                                        color === '#f1ff39' ? 'black' : 'white'
+                                    }`,
+                                    fontSize: '5rem',
+                                    marginLeft: 32,
+                                }}
+                            />
+                        </div>
+                    </Typography>
+                    <Grid container style={{ width: '100%' }}>
+                        <Button
+                            style={{
+                                marginTop: 64,
+                                textTransform: 'none',
+                                background: 'transparent',
+                                border: 0,
+                            }}
+                            type='submit'
+                        >
+                            <Typography
+                                variant='h1'
+                                style={{
+                                    fontFamily: 'Inter',
+                                    color: `${
+                                        color === '#f1ff39' ? 'black' : 'white'
+                                    }`,
+                                    fontWeight: 400,
+                                    borderBottom: `4px solid ${
+                                        color === '#f1ff39' ? 'black' : 'white'
+                                    }`,
+                                    paddingBottom: 8,
+                                }}
+                            >
+                                Register
+                            </Typography>
                         </Button>
-
+                    </Grid>
+                    <Grid item xs style={{ height: '100%' }}>
                         {/* this div is for bot spam protection do not remove */}
                         <div
                             style={{

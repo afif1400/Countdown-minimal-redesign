@@ -59,7 +59,11 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
                                     container
                                     justify='center'
                                     alignItems='center'
-                                    style={{ marginTop: 240, width: '75%' }}
+                                    style={{
+                                        marginTop: 240,
+                                        width: '75%',
+                                        paddingBottom: 240,
+                                    }}
                                 >
                                     <nav>
                                         <ul>

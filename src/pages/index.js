@@ -17,6 +17,7 @@ export default function Index() {
         const asscroll = new ASScroll({
             customScrollbar: true,
         })
+
         gsap.registerPlugin(ScrollTrigger)
         ScrollTrigger.defaults({
             scroller: '#scroll-container',

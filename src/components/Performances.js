@@ -15,7 +15,7 @@ const Performances = ({ color }) => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
-        height: '100%',
+        minHeight: '100%',
         width: '50vw',
     }
 
@@ -35,7 +35,7 @@ const Performances = ({ color }) => {
                     alignItems='flex-end'
                     justify='center'
                 >
-                    <div style={{ width: '75%', height: '36%' }}>
+                    <div style={{ width: '75%', height: '40%' }}>
                         <Typography
                             variant='h2'
                             style={{
@@ -80,10 +80,10 @@ const Performances = ({ color }) => {
                             ...textStyles,
                             width: '100%',
                             fontWeight: 200,
-                            paddingBottom: 360,
+                            paddingBottom: 124,
                             textTransform: 'uppercase',
                         }}
-                        align='center'
+                        align='left'
                     >
                         We even invited a few <br />
                         performers to the event
@@ -92,12 +92,13 @@ const Performances = ({ color }) => {
             </Grid>
             <div
                 style={{
-                    height: '100vh',
-
+                    minHeight: '100vh',
+                    maxWidth: '100vw',
                     display: 'flex',
                     flexWrap: 'wrap',
                     flexDirection: 'column',
                     position: 'relative',
+                    overflowX: 'hidden',
                 }}
                 className='performanceSlide'
             >

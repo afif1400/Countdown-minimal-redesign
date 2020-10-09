@@ -11,9 +11,9 @@ import MenuWhite from '../svgs/menuWhite.svg'
 import { fadeIn } from '../utils/Animations'
 
 const Header = ({ color }) => {
-    const [menu, setMenu] = useState(false)
     const [disabled, setDisabled] = useState(false)
     const [initial, setInitial] = useState(true)
+    const [menu, setMenu] = useState(false)
 
     return (
         <div>
@@ -44,21 +44,34 @@ const Header = ({ color }) => {
                                     }, 800)
                                 }}
                             >
-                                {color === 'white' && !menu ? (
-                                    <Menu
-                                        style={{
-                                            height: 18,
-                                        }}
-                                    />
-                                ) : (
-                                    <MenuWhite
-                                        style={{
-                                            height: 18,
-                                        }}
-                                    />
-                                )}
+                                <>
+                                    {color === 'white' && !menu ? (
+                                        <Menu
+                                            style={{
+                                                height: 18,
+                                            }}
+                                        />
+                                    ) : (
+                                        <MenuWhite
+                                            style={{
+                                                height: 18,
+                                            }}
+                                        />
+                                    )}
+                                </>
                             </Button>
-                        </Grid>{' '}
+                            <Button
+                                color='primary'
+                                variant='outlined'
+                                size='large'
+                                style={{
+                                    fontSize: '1rem',
+                                    marginLeft: 32,
+                                }}
+                            >
+                                Register Now
+                            </Button>
+                        </Grid>
                         <Grid item>
                             {!!!menu &&
                                 (color === 'white' ? (
