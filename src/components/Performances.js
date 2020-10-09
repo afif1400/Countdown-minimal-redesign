@@ -35,7 +35,7 @@ const Performances = ({ color }) => {
                     alignItems='flex-end'
                     justify='center'
                 >
-                    <div style={{ width: '75%', height: '40%' }}>
+                    <div style={{ width: '75%' }}>
                         <Typography
                             variant='h3'
                             style={{
@@ -52,7 +52,7 @@ const Performances = ({ color }) => {
                                 fontFamily: 'Open Sans',
                                 fontWeight: 300,
                                 color: 'white',
-                                marginTop: 36,
+                                marginTop: 32,
                             }}
                         >
                             {content}
