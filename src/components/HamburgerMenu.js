@@ -44,7 +44,7 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
     }, [show])
     const fontStyles = {
         fontFamily: 'Anton',
-        color: 'white',
+
         textTransform: 'uppercase',
         paddingTop: 24,
     }
