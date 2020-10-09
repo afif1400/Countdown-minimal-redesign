@@ -66,6 +66,7 @@ export default function Index() {
                 scrub: true,
                 endTrigger: '.about',
                 onLeave: () => ScrollTrigger.refresh(),
+                markers: true,
             },
         })
 
@@ -85,7 +86,7 @@ export default function Index() {
                     document.querySelector('.performanceSlide').offsetWidth,
             },
         })
-        gsap.to('.form', 0.6, {
+        gsap.to('.form', 2, {
             scrollTrigger: {
                 trigger: '.form',
                 // markers: true,
