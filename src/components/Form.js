@@ -117,6 +117,7 @@ const Form = ({ color }) => {
                             style={{
                                 display: 'grid',
                                 gridTemplateColumns: 'auto 1fr',
+                                marginTop: 32,
                             }}
                         >
                             <span>here's my email</span>
