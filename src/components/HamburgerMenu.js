@@ -42,7 +42,12 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
         }
         return () => {}
     }, [show])
-
+    const fontStyles = {
+        fontFamily: 'Anton',
+        color: 'white',
+        textTransform: 'uppercase',
+        paddingTop: 24,
+    }
     return (
         <header style={{ height: 0 }}>
             <div ref={(el) => (menu = el)} className='hamburger-menu'>
@@ -52,49 +57,58 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
                 ></div>
                 <div ref={reveal2} className='menu-layer'>
                     <div className='menu-city-background'></div>
-                    <div className='container'>
-                        <div className='wrapper'>
-                            <div className='menu-links'>
-                                <Grid
-                                    container
-                                    justify='center'
-                                    alignItems='center'
-                                    style={{
-                                        marginTop: 240,
-                                        width: '75%',
-                                        paddingBottom: 240,
-                                    }}
-                                >
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <Typography
-                                                    variant='h1'
-                                                    component='span'
-                                                >
-                                                    About
-                                                </Typography>
-                                            </li>
-                                            <li>
-                                                <Typography
-                                                    variant='h1'
-                                                    component='span'
-                                                >
-                                                    Speakers
-                                                </Typography>
-                                            </li>
-                                            <li>
-                                                <Typography
-                                                    variant='h1'
-                                                    component='span'
-                                                >
-                                                    Performances
-                                                </Typography>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </Grid>
-                            </div>
+
+                    <div className='wrapper' style={{ height: '100%' }}>
+                        <div className='menu-links' style={{ height: '100%' }}>
+                            <Grid
+                                container
+                                justify='center'
+                                alignItems='center'
+                                style={{
+                                    height: '100%',
+                                    width: '50%',
+                                }}
+                            >
+                                <nav style={{ height: '50%' }}>
+                                    <Typography
+                                        variant='h2'
+                                        component='span'
+                                        style={{
+                                            ...fontStyles,
+                                        }}
+                                    >
+                                        About <br />
+                                    </Typography>
+                                    <Typography
+                                        variant='h2'
+                                        component='span'
+                                        style={{
+                                            ...fontStyles,
+                                        }}
+                                    >
+                                        Speakers <br />
+                                    </Typography>
+                                    <Typography
+                                        variant='h2'
+                                        component='span'
+                                        style={{
+                                            ...fontStyles,
+                                        }}
+                                    >
+                                        Performances <br />
+                                    </Typography>{' '}
+                                    <Typography
+                                        variant='h2'
+                                        component='span'
+                                        style={{
+                                            ...fontStyles,
+                                        }}
+                                    >
+                                        Contact Us
+                                        <br />
+                                    </Typography>
+                                </nav>
+                            </Grid>
                         </div>
                     </div>
                 </div>

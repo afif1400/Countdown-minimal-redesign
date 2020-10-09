@@ -54,27 +54,10 @@ header {
 
                     // text-transform: uppercase;
                     nav {
-                        display: block;
-                        ul {
-                            margin: 0;
-                            padding: 0;
-                            li {
-                                list-style: none;
-                                font-size: 6rem;
-                                font-weight: 700;
-
-                                height: 135px;
-                                overflow: hidden;
-                                position: relative;
-                                width: 700px;
-                                color: #fff;
-                                text-decoration: none;
-                                span {
-                                    cursor: pointer;
-                                    &:hover {
-                                        color: $yellow;
-                                    }
-                                }
+                        span {
+                            cursor: pointer;
+                            &:hover {
+                                color: $yellow;
                             }
                         }
                     }

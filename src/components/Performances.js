@@ -37,7 +37,7 @@ const Performances = ({ color }) => {
                 >
                     <div style={{ width: '75%', height: '40%' }}>
                         <Typography
-                            variant='h2'
+                            variant='h3'
                             style={{
                                 fontFamily: 'Open Sans',
                                 fontWeight: 400,
@@ -52,7 +52,7 @@ const Performances = ({ color }) => {
                                 fontFamily: 'Open Sans',
                                 fontWeight: 300,
                                 color: 'white',
-                                marginTop: 64,
+                                marginTop: 36,
                             }}
                         >
                             {content}
@@ -148,7 +148,10 @@ const Performances = ({ color }) => {
                 >
                     {' '}
                     {innerText(
-                        'Prajwal Vishwanath',
+                        <div>
+                            Prajwal <br />
+                            vishwanath
+                        </div>,
                         <>
                             A spoken word poet and a member of the Write Angle
                             Club. Because everyone sees the same Words, but
@@ -165,7 +168,9 @@ const Performances = ({ color }) => {
                 >
                     {' '}
                     {innerText(
-                        ' Pranav and Ridhima',
+                        <div>
+                            Pranav <br /> and Ridhima
+                        </div>,
                         <>
                             A duo with a passion and love for music. Watch them
                             perform something mesmerizing.

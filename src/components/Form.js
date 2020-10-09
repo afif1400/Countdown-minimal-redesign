@@ -4,10 +4,49 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 
 import { PrimaryTextField } from '../theme'
+import CountDown from './CountDown'
 
 const Form = ({ color }) => {
     return (
-        <Grid container>
+        <Grid container className='form'>
+            <Grid
+                container
+                style={{ height: '100vh' }}
+                justify='center'
+                alignItems='center'
+                direction='column'
+            >
+                <Typography
+                    variant='h5'
+                    style={{
+                        color: `${color === '#f1ff39' ? 'black' : 'white'}`,
+                        marginTop: 124,
+                    }}
+                >
+                    #JoinTheCountdown
+                </Typography>
+                <Typography
+                    variant='h2'
+                    style={{
+                        color: `${color === '#f1ff39' ? 'black' : 'white'}`,
+                        textTransform: 'uppercase',
+                        marginTop: 16,
+                    }}
+                >
+                    We need your help
+                </Typography>
+                <Typography
+                    variant='h5'
+                    style={{
+                        color: `${color === '#f1ff39' ? 'black' : 'white'}`,
+                        marginTop: 16,
+                    }}
+                >
+                    Time is running out!
+                </Typography>
+                <div style={{ marginTop: 48 }}></div>
+                <CountDown targetDate='Oct 10, 2020' targetTime='18:00:00' />
+            </Grid>
             <Grid
                 container
                 item
@@ -17,10 +56,9 @@ const Form = ({ color }) => {
                     minHeight: '100vh',
                     backgroundColor: color,
                     width: '100%',
-                    paddingTop: 84,
+
                     paddingBottom: 84,
                 }}
-                className='form'
             >
                 <form
                     action='https://tedxpesu.us17.list-manage.com/subscribe/post?u=ba7804f5c0145f0050fc88bd4&amp;id=f7a8682e3a'
@@ -49,12 +87,12 @@ const Form = ({ color }) => {
                         >
                             <span>My name is</span>
                             <input
-                                type='email'
-                                name='EMAIL'
-                                id='mce-EMAIL'
+                                type='name'
+                                name='FNAME'
+                                id='mce-FNAME'
                                 variant='outlined'
                                 required
-                                label='Email'
+                                label='Name'
                                 style={{
                                     width: '100%',
                                     border: 0,
@@ -64,8 +102,6 @@ const Form = ({ color }) => {
                                         color === '#f1ff39' ? 'black' : 'white'
                                     }`,
                                     fontSize: '6rem',
-
-                                    display: 'inline-block',
                                     marginLeft: 32,
                                 }}
                             />
@@ -89,12 +125,12 @@ const Form = ({ color }) => {
                         >
                             <span>here's my email</span>
                             <input
-                                type='name'
-                                name='FNAME'
-                                id='mce-FNAME'
+                                type='email'
+                                name='EMAIL'
+                                id='mce-EMAIL'
                                 variant='outlined'
                                 required
-                                label='Name'
+                                label='Email'
                                 style={{
                                     width: '100%',
                                     border: 0,
@@ -103,7 +139,9 @@ const Form = ({ color }) => {
                                     borderBottom: `4px solid ${
                                         color === '#f1ff39' ? 'black' : 'white'
                                     }`,
-                                    fontSize: '5rem',
+                                    fontSize: '6rem',
+
+                                    display: 'inline-block',
                                     marginLeft: 32,
                                 }}
                             />
