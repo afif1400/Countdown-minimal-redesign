@@ -13,7 +13,7 @@ const About = ({ color }) => {
                 paddingBottom: 240,
             }}
             className='about'
-            id="about"
+            id='about'
         >
             <Grid container justify='center'>
                 <Typography
@@ -30,8 +30,14 @@ const About = ({ color }) => {
                     Join the Countdown to a <br />
                     zero carbon world
                 </Typography>
-                <div className="container"
-                    style={{ width: '75%', marginTop: 224,display:"flex",flexWrap:"wrap" }}
+                <div
+                    className='container'
+                    style={{
+                        width: '84%',
+                        marginTop: 224,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                    }}
                 >
                     <Grid xs item>
                         <Typography
