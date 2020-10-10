@@ -9,6 +9,7 @@ import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import About from '../components/About'
 import { Hero, Speakers, Performances, Form, Footer } from '../components'
+import { navHeight } from '../constants'
 
 export default function Index() {
     const [mobile, setMobile] = useState(false)
@@ -69,7 +70,7 @@ export default function Index() {
         //done setup
         const toMove =
             window.innerHeight * 1.7 +
-            96 +
+            navHeight +
             document.querySelector('.about').offsetHeight
 
         //parallax video

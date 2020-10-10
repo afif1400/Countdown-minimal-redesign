@@ -31,9 +31,8 @@ const About = ({ color }) => {
                     zero carbon world
                 </Typography>
                 <div
-                    className='container'
                     style={{
-                        width: '84%',
+                        width: '75%',
                         marginTop: 224,
                         display: 'flex',
                         flexWrap: 'wrap',

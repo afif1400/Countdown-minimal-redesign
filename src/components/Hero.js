@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import '../styles/hero.css'
 import Countdown from '../svgs/Countdown.svg'
+import { sectionWidth } from '../constants'
 
 const Hero = ({ color, setLoading }) => {
     useEffect(() => {
@@ -21,6 +22,7 @@ const Hero = ({ color, setLoading }) => {
                         height: '70vh',
                         transition: '0.5s',
                         backgroundColor: color,
+                        width: '100%',
                     }}
                     alignItems='center'
                 >
@@ -36,7 +38,7 @@ const Hero = ({ color, setLoading }) => {
                             style={{
                                 mixBlendMode: 'difference',
                                 color: 'rgba(256,256,256,0.96)',
-                                width: '84%',
+                                width: sectionWidth,
                                 fontWeight: 200,
                                 textTransform: 'uppercase',
                                 paddingTop: 48,
@@ -45,8 +47,8 @@ const Hero = ({ color, setLoading }) => {
                         >
                             We can change climate change.
                         </Typography>
-                        <div style={{ width: '84%', marginTop: 8 }}>
-                            {/* <Typography
+                        {/* <div style={{ width: '84%', marginTop: 8 }}>
+                            <Typography
                                 component='span'
                                 variant='h6'
                                 style={{
@@ -59,10 +61,9 @@ const Hero = ({ color, setLoading }) => {
                                 Register for the main event on 18.10.20. Don't
                                 forget to join the watch party for the official
                                 launch of Countdown on 10.10.20
-                            </Typography> */}
-                            {/* <div style={{ display: 'inline' }}>Icon</div> */}
-                        </div>
-                        <div style={{ width: '84%', marginTop: 48 }}></div>
+                            </Typography>
+                            <div style={{ display: 'inline' }}>Icon</div>
+                        </div> */}
                     </Grid>
                 </Grid>
                 <div

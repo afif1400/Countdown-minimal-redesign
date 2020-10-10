@@ -8,6 +8,7 @@ import LogoBlack from '../svgs/LogoBlack.svg'
 import Menu from '../svgs/menuBlack.svg'
 import MenuWhite from '../svgs/menuWhite.svg'
 import { fadeIn } from '../utils/Animations'
+import { navHeight } from '../constants'
 
 const Header = ({ color, scrollFunction }) => {
     const [disabled, setDisabled] = useState(false)
@@ -21,12 +22,13 @@ const Header = ({ color, scrollFunction }) => {
     }, [scrollFunction])
 
     return (
-        <div>
+        <Grid container justify='center'>
             <div
                 style={{
-                    height: 96,
+                    height: navHeight,
                     zIndex: 10,
                     position: 'relative',
+                    width: '92%',
                 }}
             >
                 <Grid
@@ -96,7 +98,7 @@ const Header = ({ color, scrollFunction }) => {
                 canScroll={canScroll}
                 scrollFunction={scrollFunction}
             />
-        </div>
+        </Grid>
     )
 }
 

@@ -17,21 +17,21 @@
     position: relative;
 }
 
-.speakerInfo{
+.speakerInfo {
     width: 100%;
     margin-left: 24px;
     margin-right: 24px;
     padding-right: 24px;
 }
 
-.name{
+.name {
     color: white;
     margin-bottom: 5px;
     font-weight: lighter;
 }
 
-.position{
-    font-weight: lighter;''
+.position {
+    font-weight: lighter;
     margin-top: 0;
     color: white;
 }
