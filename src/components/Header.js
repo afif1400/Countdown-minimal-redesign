@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HamburgerMenu from './HamburgerMenu'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -9,10 +9,16 @@ import Menu from '../svgs/menuBlack.svg'
 import MenuWhite from '../svgs/menuWhite.svg'
 import { fadeIn } from '../utils/Animations'
 
-const Header = ({ color }) => {
+const Header = ({ color, scrollFunction }) => {
     const [disabled, setDisabled] = useState(false)
     const [initial, setInitial] = useState(true)
     const [menu, setMenu] = useState(false)
+    const [canScroll, setCanScroll] = useState(false)
+
+    useEffect(() => {
+        setCanScroll(typeof scrollFunction === 'function')
+        return () => {}
+    }, [scrollFunction])
 
     return (
         <div>
@@ -83,7 +89,13 @@ const Header = ({ color }) => {
                     </Grid>
                 </Grid>
             </div>
-            <HamburgerMenu show={menu} setMenu={setMenu} initial={initial} />
+            <HamburgerMenu
+                show={menu}
+                setMenu={setMenu}
+                initial={initial}
+                canScroll={canScroll}
+                scrollFunction={scrollFunction}
+            />
         </div>
     )
 }

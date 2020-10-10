@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import gsap from 'gsap'
+import gsap, { TweenMax } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from '../components/Link'
 import Header from '../components/Header'
@@ -9,33 +9,35 @@ import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import About from '../components/About'
 import { Hero, Speakers, Performances, Form } from '../components'
-import InstagramIcon from '@material-ui/icons/Instagram';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FacebookIcon from '@material-ui/icons/Facebook';
-
+import InstagramIcon from '@material-ui/icons/Instagram'
+import MailOutlineIcon from '@material-ui/icons/MailOutline'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import FacebookIcon from '@material-ui/icons/Facebook'
 
 export default function Index() {
-
-    const [mobile,setMobile] = useState(false)
+    const [mobile, setMobile] = useState(false)
+    const [scrollFunction, setScrollFunction] = useState()
     useEffect(() => {
-
         const userAgent =
-          typeof window.navigator === "undefined" ? "" : navigator.userAgent;
+            typeof window.navigator === 'undefined' ? '' : navigator.userAgent
         const mobile = Boolean(
-          userAgent.match(
-            /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-          )
-        );
-        console.log("mobile",mobile)
-        setMobile(mobile);
-        if(mobile){
-            window.location.replace("https://tedxpesu.com")
+            userAgent.match(
+                /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+            )
+        )
+        console.log('mobile', mobile)
+        setMobile(mobile)
+        if (mobile) {
+            window.location.replace('https://tedxpesu.com')
         }
         //setup smooth scroll plus scrollTrigger
         const asscroll = new ASScroll({
             customScrollbar: true,
         })
+
+        const scrollTo = () => asscroll.scrollTo
+
+        setScrollFunction(scrollTo)
 
         gsap.registerPlugin(ScrollTrigger)
         ScrollTrigger.defaults({
@@ -118,8 +120,6 @@ export default function Index() {
         return () => {
             asscroll.off('scroll', ScrollTrigger.update)
         }
-
-
     }, [])
 
     const [color, setColor] = useState('black')
@@ -138,7 +138,7 @@ export default function Index() {
                         className='container'
                         style={{ backgroundColor: color }}
                     >
-                        <Header color={color} />
+                        <Header color={color} scrollFunction={scrollFunction} />
                     </div>
                     <Hero
                         color={color}
@@ -149,14 +149,55 @@ export default function Index() {
                     <Speakers color={color} />
                     <Performances color={color} />
                     <Form color={color} />
-                    <div
-                        style={{ height: '40vh', backgroundColor: 'white' }}
-                    >
-                        <div style={{display:"flex",justifyContent:"center",alignItems:"center",paddingTop:"150px"}}>
-                           <a href="mailto:contact@tedxpesu.com"> <MailOutlineIcon  style={{fontSize:"30",color:"#D44638",margin:"20px"}}/></a>
-                         <a href="https://linkedin.com/company/tedxpesu">   <LinkedInIcon  style={{fontSize:"30",color:"#1976d2",margin:"20px"}}/></a>
-                           <a href="https://instagram.com/tedxpesu"> <InstagramIcon  style={{fontSize:"30",color:"#d81b60",margin:"20px"}}/></a>
-                        <a href="https://facebook.com/tedxpesu" >    <FacebookIcon style={{fontSize:"30",color:"#3b5998",margin:"20px"}}/></a>
+                    <div style={{ height: '40vh', backgroundColor: 'white' }}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                paddingTop: '150px',
+                            }}
+                        >
+                            <a href='mailto:contact@tedxpesu.com'>
+                                {' '}
+                                <MailOutlineIcon
+                                    style={{
+                                        fontSize: '30',
+                                        color: '#D44638',
+                                        margin: '20px',
+                                    }}
+                                />
+                            </a>
+                            <a href='https://linkedin.com/company/tedxpesu'>
+                                {' '}
+                                <LinkedInIcon
+                                    style={{
+                                        fontSize: '30',
+                                        color: '#1976d2',
+                                        margin: '20px',
+                                    }}
+                                />
+                            </a>
+                            <a href='https://instagram.com/tedxpesu'>
+                                {' '}
+                                <InstagramIcon
+                                    style={{
+                                        fontSize: '30',
+                                        color: '#d81b60',
+                                        margin: '20px',
+                                    }}
+                                />
+                            </a>
+                            <a href='https://facebook.com/tedxpesu'>
+                                {' '}
+                                <FacebookIcon
+                                    style={{
+                                        fontSize: '30',
+                                        color: '#3b5998',
+                                        margin: '20px',
+                                    }}
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>

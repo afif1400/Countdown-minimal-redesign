@@ -6,19 +6,33 @@ import Grid from '@material-ui/core/Grid'
 import './menu.scss'
 import { staggerRevealClose } from '../utils/Animations'
 
-const HamburgerMenu = ({ show, setMenu, initial }) => {
+const HamburgerMenu = ({
+    show,
+    setMenu,
+    initial,
+    canScroll,
+    scrollFunction,
+}) => {
     let menu = useRef(null)
     const reveal1 = useRef()
     const reveal2 = useRef()
 
+    const scrollTo = (y) => {
+        !!canScroll && scrollFunction(y)
+    }
+
+    const closeMenu = () => {
+        staggerRevealClose(reveal2.current, reveal1.current)
+
+        gsap.to(menu, { duration: 1, css: { display: 'none' } })
+
+        setMenu(false)
+    }
+
     useEffect(() => {
         document.body.style.overflow = 'auto'
         if (!show && !initial) {
-            staggerRevealClose(reveal2.current, reveal1.current)
-
-            gsap.to(menu, { duration: 1, css: { display: 'none' } })
-
-            setMenu(false)
+            closeMenu()
         }
 
         if (show) {
@@ -77,7 +91,15 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
                                         style={{
                                             ...fontStyles,
                                         }}
-                                        onClick={() => {}}
+                                        onClick={() => {
+                                            closeMenu()
+                                            setTimeout(() => {
+                                                scrollTo(
+                                                    window.innerHeight * 1.7 +
+                                                        96
+                                                ) //put in y value you wanna scroll to
+                                            }, 750)
+                                        }}
                                     >
                                         About <br />
                                     </Typography>
