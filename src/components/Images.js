@@ -80,7 +80,7 @@ const Images = ({ image, width, children, styles }) => {
 
             speakerInfo.className="speakerInfo"
 
-            const name = document.createElement('Typography')
+            const name = document.createElement('p')
 
             speakerInfo.appendChild(name)
 
@@ -88,7 +88,7 @@ const Images = ({ image, width, children, styles }) => {
 
             name.innerHTML=speakers[i]['sname']
             name.className="name"
-            const position = document.createElement('Typography')
+            const position = document.createElement('p')
 
             speakerInfo.appendChild(position)
             position.innerHTML="Speaker designation"

@@ -4,3 +4,5 @@ export const textStyles = {
     color: 'rgba(256,256,256,0.96)',
     width: '84%',
 }
+
+export const navHeight = 124

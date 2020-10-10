@@ -8,11 +8,8 @@ import Header from '../components/Header'
 import '../styles/index.scss'
 import ASScroll from '../utils/scrollSsr'
 import About from '../components/About'
-import { Hero, Speakers, Performances, Form } from '../components'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import MailOutlineIcon from '@material-ui/icons/MailOutline'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import FacebookIcon from '@material-ui/icons/Facebook'
+import { Hero, Speakers, Performances, Form, Footer } from '../components'
+import { navHeight } from '../constants'
 
 export default function Index() {
     const [mobile, setMobile] = useState(false)
@@ -73,7 +70,7 @@ export default function Index() {
         //done setup
         const toMove =
             window.innerHeight * 1.7 +
-            96 +
+            navHeight +
             document.querySelector('.about').offsetHeight
 
         //parallax video
@@ -149,57 +146,7 @@ export default function Index() {
                     <Speakers color={color} />
                     <Performances color={color} />
                     <Form color={color} />
-                    <div style={{ height: '40vh', backgroundColor: 'white' }}>
-                        <div
-                            style={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                paddingTop: '150px',
-                            }}
-                        >
-                            <a href='mailto:contact@tedxpesu.com'>
-                                {' '}
-                                <MailOutlineIcon
-                                    style={{
-                                        fontSize: '30',
-                                        color: '#D44638',
-                                        margin: '20px',
-                                    }}
-                                />
-                            </a>
-                            <a href='https://linkedin.com/company/tedxpesu'>
-                                {' '}
-                                <LinkedInIcon
-                                    style={{
-                                        fontSize: '30',
-                                        color: '#1976d2',
-                                        margin: '20px',
-                                    }}
-                                />
-                            </a>
-                            <a href='https://instagram.com/tedxpesu'>
-                                {' '}
-                                <InstagramIcon
-                                    style={{
-                                        fontSize: '30',
-                                        color: '#d81b60',
-                                        margin: '20px',
-                                    }}
-                                />
-                            </a>
-                            <a href='https://facebook.com/tedxpesu'>
-                                {' '}
-                                <FacebookIcon
-                                    style={{
-                                        fontSize: '30',
-                                        color: '#3b5998',
-                                        margin: '20px',
-                                    }}
-                                />
-                            </a>
-                        </div>
-                    </div>
+                    <Footer color={color} />
                 </div>
             </div>
         </>

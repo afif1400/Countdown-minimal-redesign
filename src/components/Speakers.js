@@ -33,6 +33,7 @@ const Speakers = ({ color }) => {
                             ...textStyles,
                             paddingBottom: 84,
                             textTransform: 'uppercase',
+                            width: '100%',
                         }}
                     >
                         Meet the <br />
