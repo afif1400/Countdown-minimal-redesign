@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import '../styles/hero.css'
 import Countdown from '../svgs/Countdown.svg'
-import { sectionWidth } from '../constants'
+import { sectionWidth, navHeight } from '../constants'
 
 const Hero = ({ color, setLoading }) => {
     useEffect(() => {
@@ -43,6 +43,7 @@ const Hero = ({ color, setLoading }) => {
                                 textTransform: 'uppercase',
                                 paddingTop: 48,
                                 transition: '0.4s',
+                                paddingBottom: navHeight,
                             }}
                         >
                             We can change climate change.

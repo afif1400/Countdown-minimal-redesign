@@ -28,7 +28,7 @@ const Header = ({ color, scrollFunction }) => {
                     height: navHeight,
                     zIndex: 10,
                     position: 'relative',
-                    width: '92%',
+                    width: '100%',
                 }}
             >
                 <Grid

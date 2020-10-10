@@ -5,4 +5,4 @@ export const textStyles = {
     width: '84%',
 }
 
-export const navHeight = 96
+export const navHeight = 124
