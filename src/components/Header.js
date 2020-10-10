@@ -16,6 +16,10 @@ const Header = ({ color, scrollFunction }) => {
     const [menu, setMenu] = useState(false)
     const [canScroll, setCanScroll] = useState(false)
 
+   const scrollTo = (y) => {
+    !!canScroll && scrollFunction(y)
+  }
+
     useEffect(() => {
         setCanScroll(typeof scrollFunction === 'function')
         return () => {}
@@ -75,6 +79,15 @@ const Header = ({ color, scrollFunction }) => {
                                 style={{
                                     fontSize: '1rem',
                                     marginLeft: 32,
+                                }}
+
+                                onClick={() => {
+                                  setTimeout(() => {
+                                    scrollTo(
+                                      window.innerHeight * 9.2 +
+                                      96
+                                    ) //put in the value you wanna scroll to
+                                  }, 200)
                                 }}
                             >
                                 Register Now

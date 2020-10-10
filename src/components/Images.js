@@ -5,10 +5,19 @@ import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import gsap from 'gsap'
 import { Draggable } from 'gsap/Draggable'
+import speakeri1 from '../images/speakerImages/speaker1.png'
+import speakeri2 from '../images/speakerImages/speaker2.png'
+import speakeri3 from '../images/speakerImages/speaker3.png'
+import speakeri4 from '../images/speakerImages/speaker4.png'
+import speakeri5 from '../images/speakerImages/speaker5.png'
+import speakeri6 from '../images/speakerImages/speaker6.png'
+import speakeri7 from '../images/speakerImages/speaker7.png'
+import speakeri8 from '../images/speakerImages/speaker8.png'
 
 import '../styles/images.css'
 import { Grid } from '@material-ui/core'
 import guitar from '../images/guitar.jpg'
+
 
 const Images = ({ image, width, children, styles }) => {
     const [backPos, setBackPos] = useState(35)
@@ -46,14 +55,18 @@ const Images = ({ image, width, children, styles }) => {
         gsap.set([wrapper], { height: '100%' })
         gsap.set(boxes, { left: -boxWidth })
 
-        for (let i = 1; i <= numBoxes; i++) {
-            const src =
-                'https://unsplash.it/' +
-                imgWidth +
-                '/' +
-                imgHeight +
-                '?random=' +
-                i
+        const speakers = [
+            {simage:`${speakeri1}`,sname:"speaker Names"},
+            {simage:`${speakeri2}`,sname:"speaker Names"},
+            {simage:`${speakeri3}`,sname:"speaker Names"},
+            {simage:`${speakeri4}`,sname:"speaker Names"},
+            {simage:`${speakeri5}`,sname:"speaker Names"},
+            {simage:`${speakeri6}`,sname:"speaker Names"},
+            {simage:`${speakeri7}`,sname:"speaker Names"},
+            {simage:`${speakeri8}`,sname:"speaker Names"},
+        ]
+        for (let i = 0; i < speakers.length; i++) {
+            const src = speakers[i]['simage']
 
             const img = document.createElement('img')
             img.src = src
@@ -69,19 +82,20 @@ const Images = ({ image, width, children, styles }) => {
 
             speakerInfo.className = 'speakerInfo'
 
-            const name = document.createElement('p')
+            const name = document.createElement('Typography')
 
             speakerInfo.appendChild(name)
 
-            name.innerHTML = 'Speaker Name'
-            name.className = 'name'
+            speakerInfo.appendChild(document.createElement('br'))
+
+            name.innerHTML=speakers[i]['sname']
+            name.className="name"
             name.style.backgroundColor = 'black'
-            const position = document.createElement('p')
+            const position = document.createElement('Typography')
 
             speakerInfo.appendChild(position)
-
-            position.innerHTML = 'Speaker designation'
-            position.className = 'position'
+            position.innerHTML="Speaker designation"
+            position.className="position"
             position.style.backgroundColor = 'black'
 
             box.appendChild(img)

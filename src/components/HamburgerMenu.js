@@ -110,6 +110,15 @@ const HamburgerMenu = ({
                                         style={{
                                             ...fontStyles,
                                         }}
+                                        onClick={() => {
+                                            closeMenu()
+                                            setTimeout(() => {
+                                                scrollTo(
+                                                  window.innerHeight * 3.7 +
+                                                  96
+                                                ) //put in the value you wanna scroll to
+                                            }, 750)
+                                        }}
                                     >
                                         Speakers <br />
                                     </Typography>
@@ -118,15 +127,32 @@ const HamburgerMenu = ({
                                         component='span'
                                         style={{
                                             ...fontStyles,
-                                        }}
+                                        }}   onClick={() => {
+                                        closeMenu()
+                                        setTimeout(() => {
+                                            scrollTo(
+                                              window.innerHeight * 5.5 +
+                                              96
+                                            ) //put in the value you wanna scroll to
+                                        }, 750)
+                                    }}
                                     >
                                         Performances <br />
-                                    </Typography>{' '}
+                                    </Typography>
                                     <Typography
                                         variant='h2'
                                         component='span'
                                         style={{
                                             ...fontStyles,
+                                        }}
+                                        onClick={() => {
+                                            closeMenu()
+                                            setTimeout(() => {
+                                                scrollTo(
+                                                  window.innerHeight * 1.7 +
+                                                  96
+                                                ) //put in the value you wanna scroll to
+                                            }, 750)
                                         }}
                                     >
                                         Contact Us
