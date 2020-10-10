@@ -25,7 +25,7 @@ export default function Index() {
         console.log('mobile', mobile)
         setMobile(mobile)
         if (mobile) {
-            window.location.replace('https://tedxpesu.com')
+            window.location.replace('https://quizzical-ritchie-249997.netlify.app/')
         }
         //setup smooth scroll plus scrollTrigger
         const asscroll = new ASScroll({
