@@ -130,7 +130,7 @@ const HamburgerMenu = ({
                                         closeMenu()
                                         setTimeout(() => {
                                             scrollTo(
-                                              window.innerHeight * 5.5 +
+                                              window.innerHeight * 5.2 +
                                               96
                                             ) //put in the value you wanna scroll to
                                         }, 750)
