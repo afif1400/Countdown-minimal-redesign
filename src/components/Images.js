@@ -13,6 +13,7 @@ import speakeri5 from '../images/speakerImages/speaker5.png'
 import speakeri6 from '../images/speakerImages/speaker6.png'
 import speakeri7 from '../images/speakerImages/speaker7.png'
 import speakeri8 from '../images/speakerImages/speaker8.png'
+import book from '../images/book.jpg'
 
 import '../styles/images.css'
 import { Grid } from '@material-ui/core'
@@ -52,14 +53,22 @@ const Images = ({ image, width, children, styles }) => {
         gsap.set(boxes, { left: -boxWidth })
 
         const speakers = [
-            {simage:`${speakeri1}`,sname:"speaker Names"},
-            {simage:`${speakeri2}`,sname:"speaker Names"},
-            {simage:`${speakeri3}`,sname:"speaker Names"},
-            {simage:`${speakeri4}`,sname:"speaker Names"},
-            {simage:`${speakeri5}`,sname:"speaker Names"},
-            {simage:`${speakeri6}`,sname:"speaker Names"},
-            {simage:`${speakeri7}`,sname:"speaker Names"},
-            {simage:`${speakeri8}`,sname:"speaker Names"},
+            // {simage:`${speakeri1}`,sname:"speaker Names"},
+            // {simage:`${speakeri2}`,sname:"speaker Names"},
+            // {simage:`${speakeri3}`,sname:"speaker Names"},
+            // {simage:`${speakeri4}`,sname:"speaker Names"},
+            // {simage:`${speakeri5}`,sname:"speaker Names"},
+            // {simage:`${speakeri6}`,sname:"speaker Names"},
+            // {simage:`${speakeri7}`,sname:"speaker Names"},
+            // {simage:`${speakeri8}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
+            {simage:`${book}`,sname:"speaker Names"},
         ]
         for (let i = 0; i < speakers.length; i++) {
             const src = speakers[i]['simage']
