@@ -16,10 +16,14 @@ import speakeri8 from '../images/speakerImages/speaker8.png'
 
 import '../styles/images.css'
 import { Grid } from '@material-ui/core'
+import guitar from '../images/guitar.jpg'
 
 
 const Images = ({ image, width, children, styles }) => {
     const [backPos, setBackPos] = useState(35)
+    const [once, setOnce] = useState(false)
+
+    const boxWidth = Math.round(0.36 * window.innerWidth)
     useEffect(() => {
         gsap.from('.leftImage', {
             ease: 'power3.InOut',
@@ -39,9 +43,9 @@ const Images = ({ image, width, children, styles }) => {
         const proxy = document.createElement('div')
 
         const numBoxes = 10
-        const boxWidth = Math.round(0.36 * window.innerWidth)
+
         const boxHeight = Math.round(0.82 * window.innerHeight)
-        const imgWidth = boxWidth
+        const imgWidth = boxWidth - 48
         const imgHeight = boxHeight
         const viewWidth = window.innerWidth
         const wrapWidth = numBoxes * boxWidth
@@ -68,17 +72,15 @@ const Images = ({ image, width, children, styles }) => {
             img.src = src
             img.width = imgWidth
             img.height = imgHeight
-            img.style.paddingLeft = '24px'
-            img.style.paddingRight = '24px'
 
             const box = document.createElement('div')
 
             box.className = 'box'
-            box.paddingRight = 24
+            box.style.backgroundColor = 'black'
 
-            const speakerInfo = document.createElement("div")
+            const speakerInfo = document.createElement('div')
 
-            speakerInfo.className="speakerInfo"
+            speakerInfo.className = 'speakerInfo'
 
             const name = document.createElement('Typography')
 
@@ -88,20 +90,23 @@ const Images = ({ image, width, children, styles }) => {
 
             name.innerHTML=speakers[i]['sname']
             name.className="name"
+            name.style.backgroundColor = 'black'
             const position = document.createElement('Typography')
 
             speakerInfo.appendChild(position)
             position.innerHTML="Speaker designation"
             position.className="position"
+            position.style.backgroundColor = 'black'
 
             box.appendChild(img)
             box.appendChild(speakerInfo)
+
             boxes.appendChild(box)
 
             gsap.set(box, {
                 x: i * boxWidth - offset,
                 width: boxWidth,
-                height: boxHeight,
+                height: boxHeight + speakerInfo.offsetHeight,
             })
         }
 
@@ -110,6 +115,7 @@ const Images = ({ image, width, children, styles }) => {
             x: `+=${wrapWidth}`,
             ease: 'none',
             paused: true,
+            zIndex: 3,
             modifiers: {
                 x: function (x, target) {
                     x = parseInt(x) % wrapWidth
@@ -136,6 +142,7 @@ const Images = ({ image, width, children, styles }) => {
         window.addEventListener('resize', resize)
 
         function updateProgress() {
+            console.log(wrapVal(this.x) / wrapWidth, this.x)
             animation.progress(wrapVal(this.x) / wrapWidth)
         }
 
@@ -361,7 +368,7 @@ const Images = ({ image, width, children, styles }) => {
         return (
             <>
                 <div className='image-wrapper'>
-                    <div className='boxes'/>
+                    <div className='boxes' />
                 </div>
             </>
         )
