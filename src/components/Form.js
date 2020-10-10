@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 
 import { PrimaryTextField } from '../theme'
 import CountDown from './Countdown'
+import { sectionWidth } from '../constants'
 
 const Form = ({ color }) => {
     return (
@@ -64,7 +65,7 @@ const Form = ({ color }) => {
                     class='validate'
                     target='_blank'
                     novalidate
-                    style={{ width: '75%' }}
+                    style={{ width: sectionWidth }}
                 >
                     <Typography
                         component='span'

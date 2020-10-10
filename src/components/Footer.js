@@ -5,24 +5,26 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import FacebookIcon from '@material-ui/icons/Facebook'
 
 const Footer = () => {
+    const fontSize = 24
     return (
         <div>
-            <div style={{ height: '40vh', backgroundColor: 'black' }}>
+            <div style={{ backgroundColor: 'black' }}>
                 <div
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        paddingTop: '150px',
+                        paddingTop: 24,
+                        paddingBottom: 24,
                     }}
                 >
                     <a href='mailto:contact@tedxpesu.com'>
                         {' '}
                         <MailOutlineIcon
                             style={{
-                                fontSize: '30',
+                                fontSize: fontSize,
                                 color: 'white',
-                                margin: '20px',
+                                margin: '24px',
                             }}
                         />
                     </a>
@@ -30,9 +32,9 @@ const Footer = () => {
                         {' '}
                         <LinkedInIcon
                             style={{
-                                fontSize: '30',
+                                fontSize: fontSize,
                                 color: 'white',
-                                margin: '20px',
+                                margin: '24px',
                             }}
                         />
                     </a>
@@ -40,9 +42,9 @@ const Footer = () => {
                         {' '}
                         <InstagramIcon
                             style={{
-                                fontSize: '30',
+                                fontSize: fontSize,
                                 color: 'white',
-                                margin: '20px',
+                                margin: '24px',
                             }}
                         />
                     </a>
@@ -50,9 +52,9 @@ const Footer = () => {
                         {' '}
                         <FacebookIcon
                             style={{
-                                fontSize: '30',
+                                fontSize: fontSize,
                                 color: 'white',
-                                margin: '20px',
+                                margin: '24px',
                             }}
                         />
                     </a>
