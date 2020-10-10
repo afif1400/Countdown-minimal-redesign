@@ -33,7 +33,7 @@ const About = ({ color }) => {
                 <div
                     style={{
                         width: '75%',
-                        marginTop: 224,
+                        marginTop: 148,
                         display: 'flex',
                         flexWrap: 'wrap',
                     }}

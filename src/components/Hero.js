@@ -110,7 +110,7 @@ const Hero = ({ color, setLoading }) => {
                             <Typography variant='h6' style={{ color: 'white' }}>
                                 Presenting
                             </Typography>
-                            <Countdown width='24%' />
+                            <Countdown width='28%' />
                         </Grid>
                     </div>
                 </div>
