@@ -88,24 +88,15 @@ const Images = ({ image, width, children, styles }) => {
 
             name.innerHTML=speakers[i]['sname']
             name.className="name"
-<<<<<<< HEAD
             const position = document.createElement('p')
-=======
-            name.style.backgroundColor = 'black'
-            const position = document.createElement('Typography')
->>>>>>> 5e89265bbd51f3f8b0bb3538619af2b60e51320a
 
             speakerInfo.appendChild(position)
             position.innerHTML="Speaker designation"
             position.className="position"
-            position.style.backgroundColor = 'black'
 
             box.appendChild(img)
-            box.appendChild(speakerInfo)
-<<<<<<< HEAD
-=======
 
->>>>>>> 5e89265bbd51f3f8b0bb3538619af2b60e51320a
+            box.appendChild(speakerInfo)
             boxes.appendChild(box)
 
             gsap.set(box, {
