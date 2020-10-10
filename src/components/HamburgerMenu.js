@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import './menu.scss'
 import { staggerRevealClose } from '../utils/Animations'
-import { navHeight } from '../constants'
 
 const HamburgerMenu = ({
     show,
@@ -97,7 +96,7 @@ const HamburgerMenu = ({
                                             setTimeout(() => {
                                                 scrollTo(
                                                     window.innerHeight * 1.7 +
-                                                        navHeight
+                                                        96
                                                 ) //put in the value you wanna scroll to
                                             }, 750)
                                         }}
@@ -131,7 +130,7 @@ const HamburgerMenu = ({
                                         closeMenu()
                                         setTimeout(() => {
                                             scrollTo(
-                                              window.innerHeight * 5.3 +
+                                              window.innerHeight * 5.5 +
                                               96
                                             ) //put in the value you wanna scroll to
                                         }, 750)
@@ -149,7 +148,7 @@ const HamburgerMenu = ({
                                             closeMenu()
                                             setTimeout(() => {
                                                 scrollTo(
-                                                  window.outerHeight * 1.7 +
+                                                  window.innerHeight * 1.7 +
                                                   96
                                                 ) //put in the value you wanna scroll to
                                             }, 750)
