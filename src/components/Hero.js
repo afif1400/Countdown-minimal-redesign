@@ -60,7 +60,7 @@ const Hero = ({ color, setLoading }) => {
                                 forget to join the watch party for the official
                                 launch of Countdown on 10.10.20
                             </Typography> */}
-                            <div style={{ display: 'inline' }}>Icon</div>
+                            {/* <div style={{ display: 'inline' }}>Icon</div> */}
                         </div>
                         <div style={{ width: '84%', marginTop: 48 }}></div>
                     </Grid>

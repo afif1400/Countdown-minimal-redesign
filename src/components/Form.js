@@ -8,7 +8,7 @@ import CountDown from './Countdown'
 
 const Form = ({ color }) => {
     return (
-        <Grid container className='form' style={{transition:"0.5s"}}>
+        <Grid container className='form' style={{ transition: '0.5s' }}>
             <Grid
                 container
                 style={{ height: '100vh' }}
@@ -38,8 +38,8 @@ const Form = ({ color }) => {
 
                 <div style={{ marginTop: 48 }}></div>
                 <CountDown
-                    targetDate='Oct 10, 2020'
-                    targetTime='18:00:00'
+                    targetDate='Oct 18, 2020'
+                    targetTime='16:00:00'
                     color={color}
                 />
             </Grid>

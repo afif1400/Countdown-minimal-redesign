@@ -97,7 +97,7 @@ const HamburgerMenu = ({
                                                 scrollTo(
                                                     window.innerHeight * 1.7 +
                                                         96
-                                                ) //put in y value you wanna scroll to
+                                                ) //put in the value you wanna scroll to
                                             }, 750)
                                         }}
                                     >
