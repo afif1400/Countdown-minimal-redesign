@@ -84,8 +84,8 @@ const Header = ({ color, scrollFunction }) => {
                                 onClick={() => {
                                   setTimeout(() => {
                                     scrollTo(
-                                      window.innerHeight * 9.9 +
-                                      96
+                                      window.innerHeight * 1.7 + (document.querySelector(".about").offsetHeight) + (document.querySelector(".performanceSlide").offsetHeight) + (document.querySelector(".form").offsetHeight) - (document.querySelector(".footer").offsetHeight)  + (document.querySelector(".performers").offsetHeight)  + (document.querySelector(".speakers").offsetHeight) + (document.querySelector(".performers").offsetHeight) +(document.querySelector(".performances").offsetHeight)
+                                +      96
                                     ) //put in the value you wanna scroll to
                                   }, 200)
                                 }}

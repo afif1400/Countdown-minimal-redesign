@@ -7,7 +7,7 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 const Footer = () => {
     const fontSize = 24
     return (
-        <div>
+        <div className="footer">
             <div style={{ backgroundColor: 'black' }}>
                 <div
                     style={{

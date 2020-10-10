@@ -113,7 +113,7 @@ const HamburgerMenu = ({
                                             closeMenu()
                                             setTimeout(() => {
                                                 scrollTo(
-                                                  window.innerHeight * 3.7 +
+                                                  window.innerHeight * 1.7 + (document.querySelector(".about").offsetHeight) +
                                                   96
                                                 ) //put in the value you wanna scroll to
                                             }, 750)
@@ -130,7 +130,7 @@ const HamburgerMenu = ({
                                         closeMenu()
                                         setTimeout(() => {
                                             scrollTo(
-                                              window.innerHeight * 5.2 +
+                                              window.innerHeight * 1.7 + (document.querySelector(".about").offsetHeight) + (document.querySelector(".speakers").offsetHeight) +
                                               96
                                             ) //put in the value you wanna scroll to
                                         }, 750)

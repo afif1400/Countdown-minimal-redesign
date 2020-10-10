@@ -22,6 +22,7 @@ const Performances = ({ color }) => {
     const innerText = (title, content) => {
         return (
             <div
+              className="performances"
                 style={{
                     position: 'absolute',
                     backgroundColor: 'rgba(0,0,0,0.42)',
@@ -65,6 +66,7 @@ const Performances = ({ color }) => {
     return (
         <>
             <Grid
+              className="performers"
                 container
                 alignItems='center'
                 style={{
@@ -91,6 +93,7 @@ const Performances = ({ color }) => {
                 </Grid>
             </Grid>
             <div
+
                 style={{
                     minHeight: '100vh',
                     maxWidth: '100vw',

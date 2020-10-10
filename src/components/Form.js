@@ -9,7 +9,7 @@ import { sectionWidth } from '../constants'
 
 const Form = ({ color }) => {
     return (
-        <Grid container className='form' style={{ transition: '0.5s' }}>
+        <Grid container className='form' style={{ transition: '0.5s' }} >
             <Grid
                 container
                 style={{ height: '100vh' }}
@@ -45,6 +45,7 @@ const Form = ({ color }) => {
                 />
             </Grid>
             <Grid
+              className="joincount"
                 container
                 item
                 alignItems='center'

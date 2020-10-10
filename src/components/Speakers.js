@@ -15,6 +15,7 @@ const Speakers = ({ color }) => {
 
     return (
         <div
+          className="speakers"
             style={{
                 minHeight: '100vh',
                 backgroundColor: color,
