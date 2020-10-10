@@ -66,7 +66,7 @@ const Header = ({ color }) => {
                                 size='large'
                                 style={{
                                     fontSize: '1rem',
-
+                                    marginLeft: 32,
                                 }}
                             >
                                 Register Now
@@ -77,9 +77,7 @@ const Header = ({ color }) => {
                                 (color === 'white' ? (
                                     <LogoBlack style={{ width: 128 }} />
                                 ) : (
-                                    <LogoWhite
-                                        style={{ width: 128 }}
-                                    />
+                                    <LogoWhite style={{ width: 128 }} />
                                 ))}
                         </Grid>
                     </Grid>

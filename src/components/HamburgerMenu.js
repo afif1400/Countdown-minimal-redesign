@@ -1,12 +1,10 @@
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
-import {TweenMax} from "gsap";
+import { TweenMax } from 'gsap'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import './menu.scss'
 import { staggerRevealClose } from '../utils/Animations'
-import ASScroll from '../utils/scrollSsr'
-
 
 const HamburgerMenu = ({ show, setMenu, initial }) => {
     let menu = useRef(null)
@@ -22,7 +20,7 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
 
             setMenu(false)
         }
-        const asscroll = new ASScroll()
+
         if (show) {
             menu.style.display = 'block'
 
@@ -72,18 +70,16 @@ const HamburgerMenu = ({ show, setMenu, initial }) => {
                                     width: '50%',
                                 }}
                             >
-                                <nav style={{ height: '50%' }} >
+                                <nav style={{ height: '50%' }}>
                                     <Typography
                                         variant='h2'
                                         component='span'
                                         style={{
                                             ...fontStyles,
                                         }}
-
-onClick={()=>{
-}}
+                                        onClick={() => {}}
                                     >
-                                        About  <br />
+                                        About <br />
                                     </Typography>
                                     <Typography
                                         variant='h2'

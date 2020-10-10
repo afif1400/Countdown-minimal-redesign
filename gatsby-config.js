@@ -33,7 +33,6 @@ module.exports = {
                 path: path.join(__dirname, 'src', 'images'),
             },
         },
-        `gatsby-plugin-smoothscroll`,
     ],
     siteMetadata: {
         title: 'TEDx PESU',

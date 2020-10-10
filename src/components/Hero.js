@@ -17,10 +17,19 @@ const Hero = ({ color, setLoading }) => {
             <div style={{ height: '170vh' }} className='hero'>
                 <Grid
                     container
-                    style={{ height: '70vh',transition:"0.5s",backgroundColor: color }}
+                    style={{
+                        height: '70vh',
+                        transition: '0.5s',
+                        backgroundColor: color,
+                    }}
                     alignItems='center'
                 >
-                    <Grid item container justify='center' style={{transition:"0.5s"}}>
+                    <Grid
+                        item
+                        container
+                        justify='center'
+                        style={{ transition: '0.5s' }}
+                    >
                         <Typography
                             component='span'
                             variant='h1'
@@ -31,7 +40,7 @@ const Hero = ({ color, setLoading }) => {
                                 fontWeight: 200,
                                 textTransform: 'uppercase',
                                 paddingTop: 48,
-                              transition:"0.4s"
+                                transition: '0.4s',
                             }}
                         >
                             We can change climate change.
@@ -99,7 +108,7 @@ const Hero = ({ color, setLoading }) => {
                             <Typography variant='h6' style={{ color: 'white' }}>
                                 Presenting
                             </Typography>
-                            <Countdown width='35%' />
+                            <Countdown width='24%' />
                         </Grid>
                     </div>
                 </div>
