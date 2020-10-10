@@ -84,7 +84,7 @@ const Header = ({ color, scrollFunction }) => {
                                 onClick={() => {
                                   setTimeout(() => {
                                     scrollTo(
-                                      window.innerHeight * 9.2 +
+                                      window.innerHeight * 9.9 +
                                       96
                                     ) //put in the value you wanna scroll to
                                   }, 200)
