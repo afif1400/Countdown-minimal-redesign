@@ -148,8 +148,8 @@ const HamburgerMenu = ({
                                             closeMenu()
                                             setTimeout(() => {
                                                 scrollTo(
-                                                  window.innerHeight * 1.7 +
-                                                  96
+                                                  window.innerHeight * 1.7 + (document.querySelector(".about").offsetHeight) + (document.querySelector(".performanceSlide").offsetHeight) + (document.querySelector(".form").offsetHeight)  + (document.querySelector(".performers").offsetHeight)  + (document.querySelector(".speakers").offsetHeight) + (document.querySelector(".performers").offsetHeight) +(document.querySelector(".performances").offsetHeight)
+                                                +  96
                                                 ) //put in the value you wanna scroll to
                                             }, 750)
                                         }}
