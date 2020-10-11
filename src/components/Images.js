@@ -5,6 +5,8 @@ import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import gsap from 'gsap'
 import { Draggable } from 'gsap/Draggable'
+import ReactDOM from 'react-dom'
+
 import speakeri1 from '../images/speakerImages/speaker1.png'
 import speakeri2 from '../images/speakerImages/speaker2.png'
 import speakeri3 from '../images/speakerImages/speaker3.png'
@@ -16,11 +18,96 @@ import speakeri8 from '../images/speakerImages/speaker8.png'
 import book from '../images/book.jpg'
 
 import '../styles/images.css'
-import { Grid } from '@material-ui/core'
-
+import { Grid, Typography } from '@material-ui/core'
 
 const Images = ({ image, width, children, styles }) => {
     const [backPos, setBackPos] = useState(35)
+    const boxWidth = Math.round(0.36 * window.innerWidth)
+    const speakers = [
+        // {simage:`${speakeri1}`,sname:"speaker Names"},
+        // {simage:`${speakeri2}`,sname:"speaker Names"},
+        // {simage:`${speakeri3}`,sname:"speaker Names"},
+        // {simage:`${speakeri4}`,sname:"speaker Names"},
+        // {simage:`${speakeri5}`,sname:"speaker Names"},
+        // {simage:`${speakeri6}`,sname:"speaker Names"},
+        // {simage:`${speakeri7}`,sname:"speaker Names"},
+        // {simage:`${speakeri8}`,sname:"speaker Names"},
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        { src: `${book}`, name: 'speaker Names', info: 'info' },
+    ]
+    const imgWidth = boxWidth - 48
+    const imgHeight = boxHeight
+    const offset = boxWidth - window.innerWidth * 0.125 + 24
+    const boxHeight = Math.round(0.82 * window.innerHeight)
+    let boxRefs = []
+    const pushElements = () => {
+        let elements = []
+
+        const setRef = (ref) => {
+            boxRefs.push(ref)
+        }
+
+        for (let i = 0; i < speakers.length; i++) {
+            elements.push(
+                <>
+                    <div
+                        className='box'
+                        ref={setRef}
+                        style={{
+                            backgroundColor: 'black',
+                            transform: `translateX(${i * boxWidth - offset})`,
+                            width: boxWidth,
+                            minHeight: boxHeight,
+                        }}
+                    >
+                        <img
+                            src={speakers[i]['src']}
+                            width={imgWidth}
+                            height={imgHeight}
+                        />
+
+                        <Grid
+                            container
+                            direction='column'
+                            justify='center'
+                            style={{ backgroundColor: 'black' }}
+                            className='speakerInfo'
+                        >
+                            <Typography
+                                variant='body1'
+                                component='span'
+                                className='speaker-name'
+                                style={{
+                                    color: 'white',
+                                }}
+                            >
+                                {speakers[i]['name']}
+                            </Typography>
+                            <Typography
+                                variant='body1'
+                                component='span'
+                                className='speaker-info'
+                                style={{
+                                    color: 'white',
+                                    backgroundColor: 'black',
+                                }}
+                            >
+                                {speakers[i]['info']}
+                            </Typography>
+                        </Grid>
+                    </div>
+                </>
+            )
+        }
+        return elements
+    }
+
     useEffect(() => {
         gsap.from('.leftImage', {
             ease: 'power3.InOut',
@@ -39,87 +126,26 @@ const Images = ({ image, width, children, styles }) => {
         const boxes = document.querySelector('.boxes')
         const proxy = document.createElement('div')
 
-        const numBoxes = 10
-        const boxWidth = Math.round(0.36 * window.innerWidth)
-        const boxHeight = Math.round(0.82 * window.innerHeight)
-        const imgWidth = boxWidth
-        const imgHeight = boxHeight
+        const numBoxes = speakers.length
+
         const viewWidth = window.innerWidth
         const wrapWidth = numBoxes * boxWidth
         const wrapVal = gsap.utils.wrap(0, wrapWidth)
-        const offset = boxWidth - window.innerWidth * 0.125 + 24
 
         gsap.set([wrapper], { height: '100%' })
         gsap.set(boxes, { left: -boxWidth })
-
-        const speakers = [
-            // {simage:`${speakeri1}`,sname:"speaker Names"},
-            // {simage:`${speakeri2}`,sname:"speaker Names"},
-            // {simage:`${speakeri3}`,sname:"speaker Names"},
-            // {simage:`${speakeri4}`,sname:"speaker Names"},
-            // {simage:`${speakeri5}`,sname:"speaker Names"},
-            // {simage:`${speakeri6}`,sname:"speaker Names"},
-            // {simage:`${speakeri7}`,sname:"speaker Names"},
-            // {simage:`${speakeri8}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-            {simage:`${book}`,sname:"speaker Names"},
-        ]
         for (let i = 0; i < speakers.length; i++) {
-            const src = speakers[i]['simage']
-
-            const img = document.createElement('img')
-            img.src = src
-            img.width = imgWidth
-            img.height = imgHeight
-            img.style.paddingLeft = '24px'
-            img.style.paddingRight = '24px'
-
-            const box = document.createElement('div')
-
-            box.className = 'box'
-            box.paddingRight = 24
-
-            const speakerInfo = document.createElement("div")
-
-            speakerInfo.className="speakerInfo"
-
-            const name = document.createElement('p')
-
-            speakerInfo.appendChild(name)
-
-            speakerInfo.appendChild(document.createElement('br'))
-
-            name.innerHTML=speakers[i]['sname']
-            name.className="name"
-            const position = document.createElement('p')
-
-            speakerInfo.appendChild(position)
-            position.innerHTML="Speaker designation"
-            position.className="position"
-
-            box.appendChild(img)
-
-            box.appendChild(speakerInfo)
-            boxes.appendChild(box)
-
-            gsap.set(box, {
+            gsap.set(boxRefs[i], {
                 x: i * boxWidth - offset,
                 width: boxWidth,
-                height: boxHeight,
             })
         }
-
         const animation = gsap.to('.box', {
             duration: 1,
             x: `+=${wrapWidth}`,
             ease: 'none',
             paused: true,
+            zIndex: 3,
             modifiers: {
                 x: function (x, target) {
                     x = parseInt(x) % wrapWidth
@@ -371,7 +397,9 @@ const Images = ({ image, width, children, styles }) => {
         return (
             <>
                 <div className='image-wrapper'>
-                    <div className='boxes'/>
+                    <div className='boxes' style={{ height: '100%' }}>
+                        {pushElements()}
+                    </div>
                 </div>
             </>
         )
