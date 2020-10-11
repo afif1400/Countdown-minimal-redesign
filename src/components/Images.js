@@ -32,19 +32,53 @@ const Images = ({ image, width, children, styles }) => {
         // {simage:`${speakeri6}`,sname:"speaker Names"},
         // {simage:`${speakeri7}`,sname:"speaker Names"},
         // {simage:`${speakeri8}`,sname:"speaker Names"},
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
-        { src: `${book}`, name: 'speaker Names', info: 'info' },
+        {
+            src: `${book}`,
+            name: 'RK Misra',
+            info:
+                'YULU Co-Founder, Founder Director of Center for SMART cities',
+        },
+        {
+            src: `${book}`,
+            name: 'Wilma Rodrigues',
+            info: 'Founder Saahas Zero Waste',
+        },
+        {
+            src: `${book}`,
+            name: 'Gopi Sankarasubramani',
+            info: 'Founder and Trustee ,Navadarshanam ',
+        },
+        {
+            src: `${book}`,
+            name: 'Aarti Khosla',
+            info: 'Founder Director, Climate Trends',
+        },
+        {
+            src: `${book}`,
+            name: 'Sakshi Agarwal',
+            info: 'Farm Theory Co-founder',
+        },
+        {
+            src: `${book}`,
+            name: 'Sahar Mansoor',
+            info: 'Founder, Bare Necessities',
+        },
+        {
+            src: `${book}`,
+            name: 'Haaziq Kazi',
+            info: 'Creator and Innovator of ERVIS,Changemaker',
+        },
+        { src: `${book}`, name: 'Garvita Gulhati', info: 'Founder ,Why Waste' },
+        {
+            src: `${book}`,
+            name: 'Smita Kulkarni',
+            info: 'Co-founder, Stonesoup',
+        },
     ]
     const imgWidth = boxWidth - 48
-    const imgHeight = boxHeight
+    const imgHeight = boxHeight - 48
     const offset = boxWidth - window.innerWidth * 0.125 + 24
-    const boxHeight = Math.round(0.82 * window.innerHeight)
+    const boxHeight = Math.round(0.86 * window.innerHeight)
     let boxRefs = []
     const pushElements = () => {
         let elements = []
@@ -60,42 +94,44 @@ const Images = ({ image, width, children, styles }) => {
                         className='box'
                         ref={setRef}
                         style={{
-                            backgroundColor: 'black',
                             transform: `translateX(${i * boxWidth - offset})`,
                             width: boxWidth,
-                            minHeight: boxHeight,
+                            // minHeight: boxHeight,
                         }}
                     >
                         <img
                             src={speakers[i]['src']}
                             width={imgWidth}
-                            height={imgHeight}
+                            height={boxHeight}
                         />
 
                         <Grid
                             container
                             direction='column'
                             justify='center'
-                            style={{ backgroundColor: 'black' }}
+                            style={{ height: '100%' }}
                             className='speakerInfo'
                         >
                             <Typography
-                                variant='body1'
+                                variant='h6'
                                 component='span'
                                 className='speaker-name'
                                 style={{
                                     color: 'white',
+                                    fontWeight: 200,
+                                    marginTop: 24,
                                 }}
                             >
                                 {speakers[i]['name']}
                             </Typography>
                             <Typography
-                                variant='body1'
                                 component='span'
                                 className='speaker-info'
                                 style={{
                                     color: 'white',
                                     backgroundColor: 'black',
+                                    fontWeight: 200,
+                                    fontSize: '1.15rem',
                                 }}
                             >
                                 {speakers[i]['info']}
