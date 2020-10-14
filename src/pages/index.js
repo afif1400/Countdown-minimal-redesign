@@ -11,22 +11,24 @@ import About from '../components/About';
 import { Hero, Speakers, Performances, Form, Footer } from '../components';
 import { navHeight } from '../constants';
 
+const userAgent =
+  typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
+const mobile = Boolean(
+  userAgent.match(
+    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  )
+);
+if (mobile) {
+  window.location.replace('https://tedxpesu.com/');
+}
+
 export default function Index() {
-  const [mobile, setMobile] = useState(false);
+  //   const [mobile, setMobile] = useState(false);
   const [scrollFunction, setScrollFunction] = useState();
   useEffect(() => {
-    const userAgent =
-      typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
-    const mobile = Boolean(
-      userAgent.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-      )
-    );
-    console.log('mobile', mobile);
-    setMobile(mobile);
-    if (mobile) {
-      window.location.replace('https://tedxpesu.com');
-    }
+    // console.log('mobile', mobile);
+    // setMobile(mobile);
+
     //setup smooth scroll plus scrollTrigger
     const asscroll = new ASScroll({
       customScrollbar: true,

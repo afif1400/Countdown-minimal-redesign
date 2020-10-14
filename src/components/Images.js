@@ -7,15 +7,17 @@ import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 import ReactDOM from 'react-dom';
 
-import speakeri1 from '../images/speakerImages/speaker1.png';
-import speakeri2 from '../images/speakerImages/speaker2.png';
-import speakeri3 from '../images/speakerImages/speaker3.png';
-import speakeri4 from '../images/speakerImages/speaker4.png';
-import speakeri5 from '../images/speakerImages/speaker5.png';
-import speakeri6 from '../images/speakerImages/speaker6.png';
-import speakeri7 from '../images/speakerImages/speaker7.png';
-import speakeri8 from '../images/speakerImages/speaker8.png';
-import book from '../images/book.jpg';
+import speakeri1 from '../images/speakerImages/rk.jpeg';
+import speakeri2 from '../images/speakerImages/wilma.jpg';
+import speakeri3 from '../images/speakerImages/gopi.jpg';
+import speakeri4 from '../images/speakerImages/aartikhosla.jpg';
+import speakeri5 from '../images/speakerImages/sakshi.jpg';
+import speakeri6 from '../images/speakerImages/sahar.jpg';
+import speakeri7 from '../images/speakerImages/haaziq.jpeg';
+import speakeri8 from '../images/speakerImages/garvita.jpg';
+import speakeri9 from '../images/speakerImages/smita.jpg';
+
+// import book from '../images/book.jpg';
 
 import '../styles/images.css';
 import { Grid, Typography } from '@material-ui/core';
@@ -24,14 +26,6 @@ const Images = ({ image, width, children, styles }) => {
   const [backPos, setBackPos] = useState(35);
   const boxWidth = Math.round(0.36 * window.innerWidth);
   const speakers = [
-    // {simage:`${speakeri1}`,sname:"speaker Names"},
-    // {simage:`${speakeri2}`,sname:"speaker Names"},
-    // {simage:`${speakeri3}`,sname:"speaker Names"},
-    // {simage:`${speakeri4}`,sname:"speaker Names"},
-    // {simage:`${speakeri5}`,sname:"speaker Names"},
-    // {simage:`${speakeri6}`,sname:"speaker Names"},
-    // {simage:`${speakeri7}`,sname:"speaker Names"},
-    // {simage:`${speakeri8}`,sname:"speaker Names"},
     {
       src: `${speakeri1}`,
       name: 'RK Misra',
@@ -43,22 +37,22 @@ const Images = ({ image, width, children, styles }) => {
       info: 'Founder Saahas Zero Waste',
     },
     {
-      src: `${speakeri4}`,
+      src: `${speakeri3}`,
       name: 'Gopi Sankarasubramani',
       info: 'Founder and Trustee ,Navadarshanam ',
     },
     {
-      src: `${speakeri5}`,
+      src: `${speakeri4}`,
       name: 'Aarti Khosla',
       info: 'Founder Director, Climate Trends',
     },
     {
-      src: `${speakeri8}`,
+      src: `${speakeri5}`,
       name: 'Sakshi Agarwal',
       info: 'Farm Theory Co-founder',
     },
     {
-      src: `${speakeri3}`,
+      src: `${speakeri6}`,
       name: 'Sahar Mansoor',
       info: 'Founder, Bare Necessities',
     },
@@ -72,11 +66,11 @@ const Images = ({ image, width, children, styles }) => {
       name: 'Garvita Gulhati',
       info: 'Founder ,Why Waste',
     },
-    // {
-    //   src: `${spea}`,
-    //   name: 'Smita Kulkarni',
-    //   info: 'Co-founder, Stonesoup',
-    // },
+    {
+      src: `${speakeri9}`,
+      name: 'Smita Kulkarni',
+      info: 'Co-founder, Stonesoup',
+    },
   ];
   const imgWidth = boxWidth - 48;
   const imgHeight = boxHeight - 48;
