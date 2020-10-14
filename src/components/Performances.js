@@ -3,12 +3,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { sectionWidth, textStyles } from '../constants';
-// import Images from './Images';
 import sourcandy from '../images/performers/sourcandy.jpg';
 import bbb from '../images/performers/bbb.png';
 import PaR from '../images/PaR.jpg';
 import prajwal from '../images/prajwal.jpg';
-import guitar from '../images/guitar.jpg';
 
 const Performances = ({ color }) => {
   const backgroundImage = {
