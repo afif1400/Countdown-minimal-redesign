@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import { sectionWidth, textStyles } from '../constants';
 import sourcandy from '../images/performers/sourcandy.jpg';
 import bbb from '../images/performers/bbb.png';
-import PaR from '../images/PaR.jpg';
-import prajwal from '../images/prajwal.jpg';
+import PaR from '../images/performers/PaR.jpg';
+import prajwal from '../images/performers/prajwal.jpg';
 
 const Performances = ({ color }) => {
   const backgroundImage = {
