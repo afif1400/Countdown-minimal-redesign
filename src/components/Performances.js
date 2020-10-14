@@ -5,8 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import { sectionWidth, textStyles } from '../constants';
 // import Images from './Images';
 import sourcandy from '../images/performers/sourcandy.jpg';
-import stage from '../images/stage.jpg';
-import book from '../images/book.jpg';
+import bbb from '../images/performers/bbb.png';
+import PaR from '../images/PaR.jpg';
+import prajwal from '../images/prajwal.jpg';
 import guitar from '../images/guitar.jpg';
 
 const Performances = ({ color }) => {
@@ -125,7 +126,7 @@ const Performances = ({ color }) => {
         <div
           className='slide'
           style={{
-            backgroundImage: `url(${stage})`,
+            backgroundImage: `url(${bbb})`,
             ...backgroundImage,
           }}
         >
@@ -142,11 +143,10 @@ const Performances = ({ color }) => {
         <div
           className='slide'
           style={{
-            backgroundImage: `url(${book})`,
+            backgroundImage: `url(${prajwal})`,
             ...backgroundImage,
           }}
         >
-          {' '}
           {innerText(
             <div>
               Prajwal <br />
@@ -162,7 +162,7 @@ const Performances = ({ color }) => {
         <div
           className='slide'
           style={{
-            backgroundImage: `url(${guitar})`,
+            backgroundImage: `url(${PaR})`,
             ...backgroundImage,
           }}
         >
