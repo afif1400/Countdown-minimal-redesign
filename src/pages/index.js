@@ -11,7 +11,7 @@ import About from '../components/About';
 import { Hero, Speakers, Performances, Form, Footer } from '../components';
 import { navHeight } from '../constants';
 
-if (type(window) !== 'undefined') {
+if (typeof window !== 'undefined') {
   const userAgent =
     typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
 
