@@ -23,7 +23,7 @@ const Footer = () => {
                             variant='subtitle2'
                             style={{ color: 'white' }}
                         >
-                            Designed by Vinay
+                            Designed by Vinay Sateesh
                         </Typography>
                     </div>
                     <div>
@@ -74,7 +74,7 @@ const Footer = () => {
                             variant='subtitle2'
                             style={{ color: 'white' }}
                         >
-                            Co-developed by Afif
+                            Co-developed by Afif ahmed
                         </Typography>
                     </div>
                 </div>
