@@ -41,7 +41,7 @@ const Hero = ({ color, setLoading }) => {
                                 width: sectionWidth,
                                 fontWeight: 200,
                                 textTransform: 'uppercase',
-                                paddingTop: 48,
+                                // paddingTop: 48,
                                 transition: '0.4s',
                                 paddingBottom: navHeight,
                             }}
@@ -97,7 +97,7 @@ const Hero = ({ color, setLoading }) => {
                         style={{
                             width: '100%',
                             height: '100%',
-                            backgroundColor: 'rgba(0,0,0,0.40)',
+                            backgroundColor: 'rgba(0,0,0,0.24)',
                         }}
                     >
                         <Grid
