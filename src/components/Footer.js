@@ -9,13 +9,14 @@ const Footer = () => {
     const fontSize = 24
     return (
         <div className='footer'>
-            <div style={{ backgroundColor: 'black' }}>
+            <div style={{ backgroundColor: 'black' }} className='container'>
                 <div
                     style={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        padding: 24,
+                        paddingTop: 24,
+                        paddingBottom: 24,
                     }}
                 >
                     <div>

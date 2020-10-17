@@ -46,7 +46,7 @@ const Hero = ({ color, setLoading }) => {
                                 paddingBottom: navHeight,
                             }}
                         >
-                            We can change climate change.
+                            Change climate change.
                         </Typography>
                         {/* <div style={{ width: '84%', marginTop: 8 }}>
                             <Typography
