@@ -66,7 +66,7 @@ class CountDown extends Component {
         return (
             <Fragment>
                 <div className='timerWrapper'>
-                    {!isExpired && targetDate && targetTime ? (
+                    {targetDate && targetTime ? (
                         <div className='counter'>
                             {Object.entries(remaining).map((el, i) => (
                                 <div key={i} className='entry'>
