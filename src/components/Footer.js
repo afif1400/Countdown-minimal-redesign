@@ -24,7 +24,7 @@ const Footer = () => {
                             variant='subtitle2'
                             style={{ color: 'white' }}
                         >
-                            Designed and Developed <br /> by Vinay Sateesh
+                            Designed and developed <br /> by Vinay Sateesh
                         </Typography>
                     </div>
                     <div>

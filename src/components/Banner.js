@@ -51,45 +51,43 @@ const Banner = ({ scrollFunction }) => {
                             >
                                 Watch now
                             </Button>
-                            <Button
-                                variant='outlined'
-                                style={{
-                                    marginLeft: 18,
-                                }}
-                                onClick={() => {
-                                    setTimeout(() => {
-                                        scrollTo(
-                                            window.innerHeight * 1.7 +
-                                                document.querySelector('.about')
-                                                    .offsetHeight +
-                                                document.querySelector(
-                                                    '.performanceSlide'
-                                                ).offsetHeight +
-                                                document.querySelector('.form')
-                                                    .offsetHeight -
-                                                document.querySelector(
-                                                    '.footer'
-                                                ).offsetHeight +
-                                                document.querySelector(
-                                                    '.performers'
-                                                ).offsetHeight +
-                                                document.querySelector(
-                                                    '.speakers'
-                                                ).offsetHeight +
-                                                document.querySelector(
-                                                    '.performers'
-                                                ).offsetHeight +
-                                                document.querySelector(
-                                                    '.performances'
-                                                ).offsetHeight +
-                                                96
-                                        ) //put in the value you wanna scroll to
-                                    }, 200)
-                                }}
-                            >
-                                Register
-                            </Button>
                         </a>
+                        <Button
+                            variant='outlined'
+                            style={{
+                                marginLeft: 18,
+                            }}
+                            onClick={() => {
+                                setTimeout(() => {
+                                    scrollTo(
+                                        window.innerHeight * 1.7 +
+                                            document.querySelector('.about')
+                                                .offsetHeight +
+                                            document.querySelector(
+                                                '.performanceSlide'
+                                            ).offsetHeight +
+                                            document.querySelector('.form')
+                                                .offsetHeight -
+                                            document.querySelector('.footer')
+                                                .offsetHeight +
+                                            document.querySelector(
+                                                '.performers'
+                                            ).offsetHeight +
+                                            document.querySelector('.speakers')
+                                                .offsetHeight +
+                                            document.querySelector(
+                                                '.performers'
+                                            ).offsetHeight +
+                                            document.querySelector(
+                                                '.performances'
+                                            ).offsetHeight +
+                                            96
+                                    ) //put in the value you wanna scroll to
+                                }, 200)
+                            }}
+                        >
+                            Register
+                        </Button>
                     </Grid>
                     <div></div>
                 </Grid>
