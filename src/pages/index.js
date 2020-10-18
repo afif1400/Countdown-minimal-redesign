@@ -17,7 +17,6 @@ import {
     Banner,
 } from '../components'
 import { navHeight } from '../constants'
-import { body } from '@ashthornton/asscroll'
 
 if (typeof window !== 'undefined') {
     const userAgent =
