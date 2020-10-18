@@ -15,11 +15,11 @@ const Hero = ({ color, setLoading }) => {
     }, [])
     return (
         <>
-            <div style={{ height: '170vh' }} className='hero'>
+            <div style={{ height: '164vh' }} className='hero'>
                 <Grid
                     container
                     style={{
-                        height: '70vh',
+                        height: '64vh',
                         transition: '0.5s',
                         backgroundColor: color,
                         width: '100%',
