@@ -16,9 +16,9 @@ const Header = ({ color, scrollFunction }) => {
     const [menu, setMenu] = useState(false)
     const [canScroll, setCanScroll] = useState(false)
 
-   const scrollTo = (y) => {
-    !!canScroll && scrollFunction(y)
-  }
+    const scrollTo = (y) => {
+        !!canScroll && scrollFunction(y)
+    }
 
     useEffect(() => {
         setCanScroll(typeof scrollFunction === 'function')
@@ -72,7 +72,7 @@ const Header = ({ color, scrollFunction }) => {
                                     )}
                                 </>
                             </Button>
-                            <Button
+                            {/* <Button
                                 color='primary'
                                 variant='outlined'
                                 size='large'
@@ -91,7 +91,7 @@ const Header = ({ color, scrollFunction }) => {
                                 }}
                             >
                                 Register Now
-                            </Button>
+                            </Button> */}
                         </Grid>
                         <Grid item>
                             {!!!menu &&

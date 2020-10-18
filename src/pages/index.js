@@ -143,7 +143,7 @@ export default function Index() {
                 }}
             >
                 <div id='scroll-container'>
-                    <Banner />
+                    <Banner scrollFunction={scrollFunction} />
                     <div
                         className='container'
                         style={{ backgroundColor: color }}
